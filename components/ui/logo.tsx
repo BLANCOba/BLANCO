@@ -14,10 +14,7 @@ export function Logo() {
       className="flex-shrink-0"
     >
       <img
-        src={theme === 'dark' 
-          ? 'https://utfs.io/f/1GYYBCL0NUjreMzFe4ljYpc1GxTy0Fgomt9arhfV3d4nDbvO'
-          : 'https://utfs.io/f/1GYYBCL0NUjrgaBLQbtmav6U2PS5TLFybYodtC8O9AEBxscw'
-        }
+          src="/blancomedia_logo_white.png"
         alt="Blanco"
         className="h-8 w-auto"
       />

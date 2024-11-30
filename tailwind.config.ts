@@ -9,6 +9,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        'xs': '0.9rem',     // 0.75rem * 1.2
+        'sm': '1.05rem',    // 0.875rem * 1.2
+        'base': '1.2rem',   // 1rem * 1.2
+        'lg': '1.35rem',    // 1.125rem * 1.2
+        'xl': '1.5rem',     // 1.25rem * 1.2
+        '2xl': '1.8rem',    // 1.5rem * 1.2
+        '3xl': '2.25rem',   // 1.875rem * 1.2
+        '4xl': '2.7rem',    // 2.25rem * 1.2
+        '5xl': '3.0rem',    // 3rem * 1.2
+        '6xl': '3.75rem',    // 3.75rem * 1.2
+        '7xl': '5.4rem',    // 4.5rem * 1.2
+        '8xl': '7.2rem',    // 6rem * 1.2
+        '9xl': '9.6rem',    // 8rem * 1.2
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -63,20 +78,12 @@ const config: Config = {
       },
       keyframes: {
         'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
       },
       animation: {
@@ -87,4 +94,5 @@ const config: Config = {
   },
   plugins: [require('tailwindcss-animate')],
 };
+
 export default config;

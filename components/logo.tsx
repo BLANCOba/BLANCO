@@ -11,7 +11,7 @@ export function Logo() {
       className="w-48 md:w-64 mb-8"
     >
       <img
-        src="/blanco-logo.png"
+        src="/blancomedia_logo_white.png"
         alt="Blanco Consulting"
         className="w-full h-auto"
       />
