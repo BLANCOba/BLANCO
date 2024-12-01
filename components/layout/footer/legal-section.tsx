@@ -24,7 +24,7 @@ export function LegalSection() {
         onClick={() => setIsOpen(!isOpen)}
         className="text-muted-foreground hover:text-foreground"
       >
-        Legal Information {isOpen ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronUp className="ml-2 h-4 w-4 rotate-180" />}
+        Legal Information/Impressum {isOpen ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronUp className="ml-2 h-4 w-4 rotate-180" />}
       </Button>
 
       <AnimatePresence>
@@ -40,9 +40,9 @@ export function LegalSection() {
               <div>
                 <h3 className="font-semibold mb-2">Impressum</h3>
                 <p className="text-sm text-muted-foreground">
-                  BLANCO Consulting GmbH<br />
-                  Friedrichstraße 123<br />
-                  10117 Berlin, Germany<br />
+                  BLANCO Consulting<br />
+                  Sprengelstraße 39<br />
+                  13353 Berlin, Germany<br />
                   VAT ID: DE123456789
                 </p>
               </div>
@@ -66,7 +66,7 @@ export function LegalSection() {
                     onClick={() => handlePolicyClick('terms')}
                     className="text-sm text-muted-foreground hover:text-foreground block"
                   >
-                    Terms of Use
+                    Terms of Service
                   </button>
                 </div>
               </div>

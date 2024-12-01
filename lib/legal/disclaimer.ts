@@ -1,31 +1,31 @@
 export const disclaimer = {
-  version: '1.0.0',
-  lastUpdated: '2024-03-26',
+  version: '1.0.1',
+  lastUpdated: '2024-12-01',
   content: {
     general: {
-      title: 'General Disclaimer',
-      text: 'The information provided on this website is for general informational purposes only. While we strive to keep the information up to date and accurate, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained on the website.'
+      title: 'Content Responsibility',
+      text: 'The content on this website is provided for informational purposes only. While we strive to ensure accuracy and timeliness, we make no warranties or representations regarding the completeness, accuracy, reliability, or suitability of the information provided. Any reliance you place on such information is strictly at your own risk.'
     },
     liability: {
       title: 'Limitation of Liability',
       sections: [
         {
-          title: 'Use of Information',
-          text: 'Any reliance you place on such information is strictly at your own risk. We will not be liable for any loss or damage including without limitation, indirect or consequential loss or damage, arising from the use of this website.'
+          title: 'Direct and Indirect Liability',
+          text: 'We are not liable for any direct, indirect, or consequential damages resulting from the use of this website, including but not limited to loss of data, profits, or business opportunities.'
         },
         {
           title: 'External Links',
-          text: 'Through this website, you may link to other websites which are not under our control. We have no control over the nature, content, and availability of those sites.'
+          text: 'This website may contain links to external websites. We have no control over the content, availability, or practices of these websites and accept no liability for any external content. Links were reviewed for potential legal violations at the time of linking. If we become aware of any unlawful content, such links will be promptly removed.'
         }
       ]
     },
     intellectualProperty: {
       title: 'Intellectual Property',
-      text: 'All trademarks, service marks, trade names, and logos displayed on this website are the property of their respective owners. Nothing contained on this website should be construed as granting any license or right to use any trademark without the prior written permission of the trademark owner.'
+      text: 'All content, including text, images, and logos, is the property of their respective owners and is used in accordance with licensing agreements. Images on this website are sourced from Adobe Stock and Unsplash under appropriate licenses. Unauthorized use, reproduction, or distribution of this material is prohibited.'
     },
     changes: {
-      title: 'Changes and Updates',
-      text: 'We reserve the right to make changes to this disclaimer at any time without notice. Your continued use of our website following any changes indicates your acceptance of these changes.'
+      title: 'Changes to this Disclaimer',
+      text: 'We reserve the right to modify or update this Disclaimer at any time without notice. Continued use of the website after changes are made constitutes acceptance of the revised Disclaimer.'
     }
   }
 };

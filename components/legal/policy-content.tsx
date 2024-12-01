@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { privacyPolicy } from '@/lib/legal/privacy-policy';
 import { disclaimer } from '@/lib/legal/disclaimer';
-import { termsOfUse } from '@/lib/legal/terms-of-use';
+import {termsOfService, termsOfUse} from '@/lib/legal/terms-of-service';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
@@ -21,7 +21,7 @@ export function PolicyContent({ type, onClose }: PolicyContentProps) {
       case 'disclaimer':
         return disclaimer;
       case 'terms':
-        return termsOfUse;
+        return termsOfService;
       default:
         return null;
     }
@@ -33,7 +33,7 @@ export function PolicyContent({ type, onClose }: PolicyContentProps) {
 
   const title = type === 'privacy' ? 'Privacy Policy' :
                type === 'disclaimer' ? 'Disclaimer' :
-               'Terms of Use';
+               'Terms of Service';
 
   return (
     <motion.div

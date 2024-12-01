@@ -1,109 +1,52 @@
 export const privacyPolicy = {
-  version: '1.0.0',
-  lastUpdated: '2024-03-26',
+  version: '1.0.1',
+  lastUpdated: '2024-12-01',
   content: {
     introduction: {
       title: 'Privacy Policy',
-      text: 'At BLANCO Consulting, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.',
+      text: 'At BLANCO Consulting, we respect your privacy. This Privacy Policy outlines the data we collect and how we use it to enhance your experience on our website.'
     },
     dataCollection: {
-      title: '1. Information Collection',
+      title: '1. Data We Collect',
       sections: [
         {
-          title: '1.1 Personal Information',
-          text: 'We collect information that you voluntarily provide when using our services, including:',
-          items: [
-            'Name and contact information',
-            'Email address',
-            'Phone number',
-            'Company details',
-            'Communication preferences'
-          ]
+          title: '1.1 Information You Provide',
+          text: 'When you submit a message through our contact form, we collect your Name, Email Address, and the content of your message.'
         },
         {
-          title: '1.2 Automatically Collected Information',
-          text: 'We automatically collect certain information when you visit our website:',
-          items: [
-            'IP address',
-            'Browser type',
-            'Device information',
-            'Usage data',
-            'Cookies and similar technologies'
-          ]
+          title: '1.2 Analytics Data',
+          text: 'We use Google Analytics to collect anonymized information about your visit, including anonymized IP address, browser type, device type, and usage data such as pages visited.'
         }
       ]
     },
     dataUsage: {
-      title: '2. How We Use Your Information',
+      title: '2. How We Use Your Data',
       items: [
-        'Provide and maintain our services',
-        'Communicate with you about our services',
-        'Improve our website and services',
-        'Comply with legal obligations',
-        'Detect and prevent fraud'
+        'Respond to your inquiries submitted through the contact form',
+        'Analyze website usage to improve our functionality and content',
+        'Ensure compliance with applicable data protection laws (e.g., GDPR)'
       ]
     },
     dataSecurity: {
-      title: '3. Data Protection',
-      text: 'We implement appropriate technical and organizational measures to protect your personal information:',
-      measures: [
-        'Encryption of data in transit and at rest',
-        'Regular security assessments',
-        'Access controls and authentication',
-        'Employee training on data protection',
-        'Regular backup procedures'
-      ]
+      title: '3. Data Security',
+      text: 'We implement appropriate technical measures to safeguard your data and do not sell or share your personal data with third parties except as required by law.'
     },
     userRights: {
       title: '4. Your Rights',
       rights: [
-        'Access your personal data',
-        'Correct inaccurate data',
+        'Request access to or correction of your personal data',
         'Request deletion of your data',
-        'Object to processing',
-        'Data portability',
-        'Withdraw consent'
-      ]
-    },
-    thirdParties: {
-      title: '5. Third-Party Sharing',
-      text: 'We may share your information with:',
-      parties: [
-        'Service providers',
-        'Business partners',
-        'Legal authorities when required',
-        'Professional advisors'
+        'Withdraw consent for data processing at any time'
       ]
     },
     cookies: {
-      title: '6. Cookie Policy',
-      text: 'We use cookies and similar tracking technologies to:',
-      purposes: [
-        'Improve site functionality',
-        'Analyze usage patterns',
-        'Remember your preferences',
-        'Provide personalized content'
-      ]
-    },
-    compliance: {
-      title: '7. Regulatory Compliance',
-      regulations: [
-        {
-          name: 'GDPR',
-          description: 'We comply with the EU General Data Protection Regulation.'
-        },
-        {
-          name: 'CCPA',
-          description: 'We honor California Consumer Privacy Act requirements.'
-        }
-      ]
+      title: '5. Cookies',
+      text: 'We use cookies to improve website performance and analyze user behavior. By using our website, you consent to the use of cookies. You can disable cookies through your browser settings.'
     },
     contact: {
-      title: '8. Contact Information',
+      title: '6. Contact Us',
       details: {
-        email: 'privacy@blancoconsulting.com',
-        phone: '+49 30 123456789',
-        address: 'Friedrichstraße 123, 10117 Berlin, Germany'
+        email: 'privacy@blancoconsulting.com'
       }
     }
   }
