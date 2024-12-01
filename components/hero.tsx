@@ -36,38 +36,38 @@ export function Hero() {
         return () => window.removeEventListener('resize', updateRowsToShow);
     }, []);
 
-    const LogoRow = ({ rowIndex }) => (
-        <motion.div
-            key={rowIndex}
-            className="flex mb-6"
-            initial={{ x: rowIndex % 2 === 0 ? "0%" : "-100%" }}
-            animate={{ x: rowIndex % 2 === 0 ? "-100%" : "0%" }}
-            transition={{
-                x: {
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    duration: 50,
-                    ease: "linear",
-                },
-            }}
-        >
-            {[...logos.slice(rowIndex * 10, (rowIndex + 1) * 10), ...logos.slice(rowIndex * 10, (rowIndex + 1) * 10)].map((logo, index) => (
-                <div key={index} className="flex-shrink-0 px-12">
-                    <Image
-                        src={logo}
-                        alt={`Client logo ${(index % 10) + 1 + (rowIndex * 10)}`}
-                        width={64}
-                        height={64}
-                        className="h-16 w-auto object-contain"
-                        loading="eager"
-                    />
-                </div>
-            ))}
-        </motion.div>
+    const LogoRow = ({ rowIndex }: { rowIndex: number }) => (
+      <motion.div
+        key={rowIndex}
+        className="flex mb-6"
+        initial={{ x: rowIndex % 2 === 0 ? "0%" : "-100%" }}
+        animate={{ x: rowIndex % 2 === 0 ? "-100%" : "0%" }}
+        transition={{
+          x: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 50,
+            ease: "linear",
+          },
+        }}
+      >
+        {[...logos.slice(rowIndex * 10, (rowIndex + 1) * 10), ...logos.slice(rowIndex * 10, (rowIndex + 1) * 10)].map((logo, index) => (
+          <div key={index} className="flex-shrink-0 px-12">
+            <Image
+              src={logo}
+              alt={`Client logo ${(index % 10) + 1 + (rowIndex * 10)}`}
+              width={64}
+              height={64}
+              className="h-16 w-auto object-contain"
+              loading="eager"
+            />
+          </div>
+        ))}
+      </motion.div>
     );
 
     return (
-        <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+        <section className="relative min-h-screen flex flex-col justify-end portrait:justify-center overflow-hidden">
             <div 
                 className="absolute inset-0 z-0"
                 style={{
