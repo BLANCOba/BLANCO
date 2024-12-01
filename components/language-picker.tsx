@@ -14,6 +14,8 @@ const languages = [
   { code: 'es', name: 'Español' },
   { code: 'de', name: 'Deutsch' },
   { code: 'ja', name: '日本語' },
+  { code: 'fr', name: 'Français' },
+  { code: 'th', name: 'ไทย' },
 ];
 
 export function LanguagePicker() {
