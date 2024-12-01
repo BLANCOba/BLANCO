@@ -4,9 +4,11 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
+import { PolicyContent } from '@/components/legal/policy-content';
 
 export function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
+  const [selectedPolicy, setSelectedPolicy] = useState<PolicyType>(null);
 
   useEffect(() => {
     const consent = localStorage.getItem('cookie-consent');
@@ -20,6 +22,11 @@ export function CookieConsent() {
     setIsVisible(false);
   };
 
+  const handlePolicyClick = () => {
+    setSelectedPolicy('privacy');
+    setIsVisible(false);
+  };
+
   return (
     <AnimatePresence>
       {isVisible && (
@@ -28,22 +35,12 @@ export function CookieConsent() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-4 left-4 z-50 w-[300px]" // Changed from right-4 to left-4
+          className="fixed bottom-4 left-4 z-50 w-[400px] p-1"
         >
-          <div className="relative bg-card/95 backdrop-blur-sm rounded-lg shadow-lg border p-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute top-2 right-2 h-6 w-6"
-              onClick={() => setIsVisible(false)}
-            >
-              <X className="h-4 w-4" />
-              <span className="sr-only">Close</span>
-            </Button>
-
+          <div className="relative bg-card/95 backdrop-blur-sm rounded-lg shadow-lg border p-5">
             <div className="space-y-3">
               <p className="text-sm text-muted-foreground">
-                We use cookies to improve your experience. By continuing, you agree to our use of cookies in accordance with data protection laws.
+                We use cookies to enhance your browsing experience. By continuing, you agree to our data policy.
               </p>
 
               <div className="flex items-center justify-between gap-2">
@@ -51,21 +48,27 @@ export function CookieConsent() {
                   variant="outline"
                   size="sm"
                   className="text-xs"
-                  onClick={() => document.getElementById('privacy-policy')?.click()}
+                  onClick={handlePolicyClick}
                 >
-                  Learn More
+                  Review Policy
                 </Button>
                 <Button
                   size="sm"
                   className="text-xs"
                   onClick={acceptCookies}
                 >
-                  Accept
+                  Got It
                 </Button>
               </div>
             </div>
           </div>
         </motion.div>
+      )}
+      {selectedPolicy && (
+        <PolicyContent
+          type={selectedPolicy}
+          onClose={() => setSelectedPolicy(null)}
+        />
       )}
     </AnimatePresence>
   );
