@@ -18,33 +18,35 @@ export function LegalSection() {
   };
 
   return (
-    <div className="relative">
+    <div className="static sm:relative">
       <Button
         variant="ghost"
         onClick={() => setIsOpen(!isOpen)}
         className="text-muted-foreground hover:text-foreground"
       >
-        Legal Information/Impressum {isOpen ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronUp className="ml-2 h-4 w-4 rotate-180" />}
+        <span className="hidden sm:inline">Legal Information/Impressum</span>
+        <span className="sm:hidden">Legal/Impressum</span>
+        {isOpen ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronUp className="ml-2 h-4 w-4 rotate-180" />}
       </Button>
 
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: 0.999 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="absolute bottom-full right-0 mb-4 w-screen md:w-[calc(100vw-2rem)] lg:w-[1024px] bg-muted/95 backdrop-blur-sm rounded-lg shadow-lg"
+            className="absolute bottom-full right-0 mb-4 w-[calc(100vw-2rem)] md:w-[calc(100vw-4rem)] lg:w-[1024px] bg-muted/95 backdrop-blur-sm rounded-lg shadow-lg max-h-[80vh] overflow-y-auto"
           >
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 p-4 sm:p-6 lg:p-8">
               <div>
                 <h3 className="font-semibold mb-2">Impressum</h3>
-                  <p className="text-sm text-muted-foreground">
-                      BLANCO Consulting<br/>
-                      Pablo Blanco<br/>
-                      Sprengelstraße 39<br/>
-                      13353 Berlin, Germany<br/>
-                  </p>
+                <p className="text-sm text-muted-foreground">
+                  BLANCO Consulting<br/>
+                  Pablo Blanco<br/>
+                  Sprengelstraße 39<br/>
+                  13353 Berlin, Germany<br/>
+                </p>
               </div>
 
               <div>
@@ -74,8 +76,8 @@ export function LegalSection() {
               <div>
                 <h3 className="font-semibold mb-2">Contact Information</h3>
                 <p className="text-sm text-muted-foreground">
-                  Email: mail@blancoconsulting.com<br />
-                  Phone: +49 30 123456789<br />
+                  Email: mail@blancoba.com<br />
+                  Phone: +49 30 40364696<br />
                 </p>
               </div>
 

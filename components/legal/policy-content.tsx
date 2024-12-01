@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { privacyPolicy } from '@/lib/legal/privacy-policy';
 import { disclaimer } from '@/lib/legal/disclaimer';
-import {termsOfService, termsOfUse} from '@/lib/legal/terms-of-service';
+import {termsOfService } from '@/lib/legal/terms-of-service';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
