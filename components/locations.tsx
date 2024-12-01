@@ -9,31 +9,31 @@ const locations = [
     city: 'Tokyo',
     country: 'Japan',
     description: 'アジア太平洋地域のハブ',
-    image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf',
+    image: '/tokyo.jpg',
   },
   {
     city: 'Berlin',
     country: 'Germany',
     description: 'Europäische Kreativzentrale',
-    image: 'https://images.unsplash.com/photo-1560969184-10fe8719e047',
+    image: '/berlin.jpg',
   },
   {
     city: 'Barcelona',
     country: 'Spain',
     description: 'Centro de innovación mediterráneo',
-    image: 'https://images.unsplash.com/photo-1583422409516-2895a77efded',
+    image: '/barcelona.jpg',
   },
   {
     city: 'Montevideo',
     country: 'Uruguay',
     description: 'Portal latinoamericano',
-    image: 'https://images.unsplash.com/photo-1600623471616-8c1966c91ff6',
+    image: '/montevideo.jpg',
   },
   {
     city: 'Bangkok',
     country: 'Thailand',
     description: 'Gateway to Southeast Asia',
-    image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308',
+    image: '/bangkok.jpg',
   },
 ];
 
