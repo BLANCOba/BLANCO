@@ -56,18 +56,18 @@ export function Locations() {
             Strategic locations across four continents
           </p>
         </div>
-        <div className="flex overflow-hidden h-[50vh] w-full border border-white">
+        <div className="flex overflow-hidden h-[50vh] w-full">
           {locations.map((location, index) => (
             <motion.div
               key={location.city}
               onClick={() => setActiveIndex(index)}
               onMouseEnter={() => setActiveIndex(index)}
               className={`relative cursor-pointer transition-all duration-300 ${
-                activeIndex === index ? 'w-2/5' : 'w-1/5'
+                activeIndex === index ? 'w-[calc(40%-3px)]' : 'w-[calc(15%-3px)]'
               } h-full ${
                 index === 0 ? 'rounded-l-lg overflow-hidden' : 
                 index === locations.length - 1 ? 'rounded-r-lg overflow-hidden' : ''
-              } border-r border-white last:border-r-0`}
+              } mr-1 last:mr-0`}
             >
               <div className="relative h-full">
                 <img
