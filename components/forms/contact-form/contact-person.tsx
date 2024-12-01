@@ -56,7 +56,7 @@ export function ContactPerson({ onNext, onBack, initialData }: ContactPersonProp
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <div className="text-sm text-muted-foreground mb-6">
-          Fields marked with <span className="text-destructive">*</span> are required
+         Tell us about your contact person.
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

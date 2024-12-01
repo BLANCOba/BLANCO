@@ -7,7 +7,6 @@ import { ContactPerson } from './contact-person';
 import { BusinessChallenges } from './business-challenges';
 import { ProjectGoals } from './project-goals';
 import { AdditionalInfo } from './additional-info';
-import { Button } from '@/components/ui/button';
 import { Steps } from './steps';
 import { useLocalStorage } from '@/hooks/use-local-storage';
 
@@ -125,14 +124,13 @@ export function ContactForm() {
           <span className="text-destructive">*</span>
         </div>
         
-        <p className="text-sm text-muted-foreground">
-          Your data is protected under our Privacy Policy. We will never share your information with third parties without your consent.
-        </p>
-        
+        <span className="text-sm text-muted-foreground">
+          Your data is protected under our Privacy Policy.
+        </span>
         {step < totalSteps && (
-          <p className="text-sm text-muted-foreground">
-            Your progress is automatically saved. You can return to complete the form later.
-          </p>
+          <span className="text-sm text-muted-foreground">
+             Your progress is automatically saved. You can return to complete the form later.
+          </span>
         )}
       </div>
     </div>

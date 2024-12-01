@@ -57,7 +57,7 @@ export function CompanyDetails({ onNext, initialData }: CompanyDetailsProps) {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <div className="text-sm text-muted-foreground mb-6">
-          All fields in this section are optional
+          Tell us about your company. This information will help us tailor our services and recommendations to your needs.
         </div>
 
         <FormField
@@ -69,7 +69,6 @@ export function CompanyDetails({ onNext, initialData }: CompanyDetailsProps) {
               <FormControl>
                 <Input placeholder="Enter your company name" {...field} />
               </FormControl>
-              <FormDescription>Optional</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -97,7 +96,7 @@ export function CompanyDetails({ onNext, initialData }: CompanyDetailsProps) {
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormDescription>Optional</FormDescription>
+
                 <FormMessage />
               </FormItem>
             )}
@@ -123,7 +122,7 @@ export function CompanyDetails({ onNext, initialData }: CompanyDetailsProps) {
                     <SelectItem value="10+">10+ years</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormDescription>Optional</FormDescription>
+
                 <FormMessage />
               </FormItem>
             )}
@@ -151,7 +150,7 @@ export function CompanyDetails({ onNext, initialData }: CompanyDetailsProps) {
                     <SelectItem value="500+">500+ employees</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormDescription>Optional</FormDescription>
+
                 <FormMessage />
               </FormItem>
             )}
@@ -177,7 +176,7 @@ export function CompanyDetails({ onNext, initialData }: CompanyDetailsProps) {
                     <SelectItem value="5m+">$5M+</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormDescription>Optional</FormDescription>
+
                 <FormMessage />
               </FormItem>
             )}
@@ -193,7 +192,7 @@ export function CompanyDetails({ onNext, initialData }: CompanyDetailsProps) {
               <FormControl>
                 <Input placeholder="https://example.com" {...field} />
               </FormControl>
-              <FormDescription>Optional</FormDescription>
+
               <FormMessage />
             </FormItem>
           )}
