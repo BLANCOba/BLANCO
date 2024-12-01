@@ -29,6 +29,12 @@ const locations = [
     description: 'Portal latinoamericano',
     image: 'https://images.unsplash.com/photo-1600623471616-8c1966c91ff6',
   },
+  {
+    city: 'Bangkok',
+    country: 'Thailand',
+    description: 'Gateway to Southeast Asia',
+    image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308',
+  },
 ];
 
 export function Locations() {
@@ -37,7 +43,7 @@ export function Locations() {
   // Auto-slide logic
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % locations.length);
+      setActiveIndex((prevIndex) => (prevIndex + 1) % locations.length); // Cycle through all locations, including Bangkok
     }, 3000);
 
     return () => clearInterval(interval);
@@ -45,14 +51,14 @@ export function Locations() {
 
   return (
       <section id="locations" className="py-20 bg-muted">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Global Presence</h2>
             <p className="text-xl text-muted-foreground">
               Strategic locations across four continents
             </p>
           </div>
-          <div className="flex overflow-hidden h-[50vh]">
+          <div className="flex overflow-hidden h-[50vh] w-full">
             {locations.map((location, index) => (
                 <motion.div
                     key={location.city}
