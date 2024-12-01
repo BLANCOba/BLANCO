@@ -94,18 +94,19 @@ export function Hero() {
                         className="backdrop-blur-md bg-white/10 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto"
                     >
                         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                            Global Vision. Local Impact.
+                            Innovating Brands Across Borders.
                         </h1>
                         <p className="text-lg md:text-xl text-white/90 mb-8">
-                            Transforming brands across continents with multilingual expertise and cultural intelligence.
+                            Empowering businesses worldwide with multilingual expertise and culturally-tailored solutions.
                         </p>
+
                         <Button 
                             size="lg" 
                             variant="outline" 
                             className="bg-white/10 hover:bg-white/20 text-white border-white/20"
                             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                         >
-                            Get Started
+                            Let’s Build Your Global Brand
                         </Button>
                     </motion.div>
                 </motion.div>
