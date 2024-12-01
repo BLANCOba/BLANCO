@@ -125,11 +125,11 @@ export function Hero() {
                         transition={{ duration: 0.8 }}
                         className="text-center mb-4"
                     >
-                        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                            Over a Decade of Global Excellence
+                        <h2 className="text-2xl md:text-2xl font-extralight text-white mb-4">
+                            12+ Years of Trusted Partnerships Worldwide.
                         </h2>
-                        <p className="text-lg text-white/80 mb-4">
-                            Trusted by industry leaders across continents
+                        <p className="text-lg text-white/80 mb-16 ">
+                            Helping brands grow and thrive in markets around the world.
                         </p>
                     </motion.div>
                     <div className="overflow-hidden w-full">
