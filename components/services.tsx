@@ -12,69 +12,69 @@ import {
 
 const services = [
   {
-    icon: Palette,
-    title: 'Visual Communication',
-    description: 'Creating impactful brand identities and visual campaigns that resonate across cultures',
-    features: [
-      'Strategic Logo Design',
-      'Brand Identity Systems',
-      'Marketing Collateral',
-      'Campaign Visuals'
-    ]
-  },
-  {
-    icon: LineChart,
-    title: 'Strategic Design',
-    description: 'Crafting user-centric experiences that drive engagement and conversions',
-    features: [
-      'UX/UI Design',
-      'Website Development',
-      'Digital Products',
-      'Analytics Integration'
-    ]
-  },
-  {
     icon: Globe2,
-    title: 'Global Branding',
-    description: 'Building brands that make lasting impressions in international markets',
+    title: 'Brand Strategy',
+    description: 'Helping brands establish their identity and stand out in competitive markets.',
     features: [
+      'Brand Audit',
+      'Brand Identity Development',
+      'Brand Positioning',
+      'Brand Guidelines'
+    ]
+  },
+  {
+    icon: Target,
+    title: 'Marketing Strategy',
+    description: 'Creating data-driven strategies to connect with target audiences and drive growth.',
+    features: [
+      'Competitor Analysis',
       'Market Research',
-      'Brand Strategy',
-      'Cultural Adaptation',
-      'Global Positioning'
+      'Digital Marketing Campaigns',
+      'SEO Optimization',
     ]
   },
   {
     icon: Lightbulb,
     title: 'Creative Strategy',
-    description: 'Developing innovative solutions that align with business objectives',
+    description: 'Transforming ideas into compelling campaigns that resonate across channels.',
     features: [
-      'Campaign Planning',
+      'Campaign Concept Development',
       'Content Strategy',
-      'Digital Marketing',
-      'Brand Storytelling'
+      'Storytelling',
+      'Creative Direction'
     ]
   },
   {
-    icon: Target,
-    title: 'Market Analysis',
-    description: 'Data-driven insights for informed decision-making and market entry',
+    icon: Palette,
+    title: 'Visual Communication',
+    description: 'Delivering designs that elevate brand presence and ensure clear messaging.',
     features: [
-      'Competitor Analysis',
-      'Market Trends',
-      'Consumer Insights',
-      'Growth Opportunities'
+      'Logo Design',
+      'Branded Collaterals',
+      'UI/UX Design',
+      'Print Design'
+    ]
+  },
+  {
+    icon: LineChart,
+    title: 'Technical Services',
+    description: 'Empowering businesses with robust digital solutions and seamless technology integration.',
+    features: [
+      'Web Development',
+      'Analytics Integration',
+      'IT Support',
+      'App Development'
     ]
   },
   {
     icon: MessageSquare,
     title: 'Content Creation',
-    description: 'Multilingual content that engages audiences across different cultures',
+    description: 'Producing engaging content to amplify your brand’s voice and reach.',
     features: [
       'Copywriting',
       'Translation',
       'Social Media',
-      'Content Marketing'
+      'Video Production'
     ]
   }
 ];
