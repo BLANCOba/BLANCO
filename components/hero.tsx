@@ -56,7 +56,7 @@ export function Hero() {
             <Image
               src={logo}
               alt={`Client logo ${(index % 10) + 1 + (rowIndex * 10)}`}
-              width={64}
+              width={128}
               height={64}
               className="h-16 w-auto object-contain"
               loading="eager"
