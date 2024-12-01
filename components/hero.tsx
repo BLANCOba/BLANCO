@@ -67,7 +67,7 @@ export function Hero() {
     );
 
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+        <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
             <div 
                 className="absolute inset-0 z-0"
                 style={{
@@ -80,7 +80,7 @@ export function Hero() {
 
             <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/40 to-black/60" />
 
-            <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -111,9 +111,8 @@ export function Hero() {
                 </motion.div>
             </div>
 
-            {/* Trust Building Section */}
             <motion.div 
-                className="relative z-20 w-full mt-0 py-2"
+                className="relative z-20 w-full py-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
@@ -148,9 +147,9 @@ export function Hero() {
                             className="text-center mt-1"
                         >
                             <Button
-                                variant="outline"
+                                variant="ghost"
                                 onClick={() => setExpanded(!expanded)}
-                                className="bg-white/10 hover:bg-white/20 text-white border-white/20"
+                                className="text-white hover:bg-white/10"
                             >
                                 {expanded ? (
                                     <>
