@@ -7,8 +7,8 @@ import { CookieConsent } from '@/components/cookie-consent';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Blanco Consulting | Global Marketing & Branding Agency',
-  description: 'Global marketing and branding agency with presence in Tokyo, Berlin, Barcelona, and Montevideo. Expert multilingual team delivering innovative solutions worldwide.',
+  title: 'Blanco Business Associates | Global Marketing & Branding Agency',
+  description: 'Global marketing and branding agency with presence in Tokyo, Berlin, Barcelona, and Montevideo.',
 };
 
 export default function RootLayout({
