@@ -75,10 +75,11 @@ export function LegalSection() {
 
               <div>
                 <h3 className="font-semibold mb-2">Contact Information</h3>
-                <p className="text-sm text-muted-foreground">
-                  Email: mail@blancoba.com<br />
-                  Phone: +49 30 40364696<br />
-                </p>
+                  <p className="text-sm text-muted-foreground">
+                      Email:<br/> <a href="mailto:contact@blancoba.com"
+                                     className="hover:underline">contact@blancoba.com</a><br/>
+                      Phone: <br/>+49 (0) 30 40 36 46 96
+                  </p>
               </div>
 
               <div>
