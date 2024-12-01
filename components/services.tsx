@@ -14,7 +14,7 @@ const services = [
   {
     icon: Globe2,
     title: 'Brand Strategy',
-    description: 'Helping brands establish their identity and stand out in competitive markets.',
+    description: 'Helping brands establish their identity and stand out in competitive markets. ',
     features: [
       'Brand Audit',
       'Brand Identity Development',
