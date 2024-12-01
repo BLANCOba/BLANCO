@@ -1,7 +1,10 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { useState, useEffect } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import Image from 'next/image';
 
 const logos = [
     '/logo1.png', '/logo2.png', '/logo3.png', '/logo4.png', '/logo5.png',
@@ -13,12 +16,62 @@ const logos = [
 ];
 
 export function Hero() {
+    const [expanded, setExpanded] = useState(false);
+    const [rowsToShow, setRowsToShow] = useState(1);
+
+    useEffect(() => {
+        const updateRowsToShow = () => {
+            const height = window.innerHeight;
+            if (height < 1000) {
+                setRowsToShow(1);
+            } else if (height < 1200) {
+                setRowsToShow(2);
+            } else {
+                setRowsToShow(3);
+            }
+        };
+
+        updateRowsToShow();
+        window.addEventListener('resize', updateRowsToShow);
+        return () => window.removeEventListener('resize', updateRowsToShow);
+    }, []);
+
+    const LogoRow = ({ rowIndex }) => (
+        <motion.div
+            key={rowIndex}
+            className="flex mb-6"
+            initial={{ x: rowIndex % 2 === 0 ? "0%" : "-100%" }}
+            animate={{ x: rowIndex % 2 === 0 ? "-100%" : "0%" }}
+            transition={{
+                x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 50,
+                    ease: "linear",
+                },
+            }}
+        >
+            {[...logos.slice(rowIndex * 10, (rowIndex + 1) * 10), ...logos.slice(rowIndex * 10, (rowIndex + 1) * 10)].map((logo, index) => (
+                <div key={index} className="flex-shrink-0 px-12">
+                    <Image
+                        src={logo}
+                        alt={`Client logo ${(index % 10) + 1 + (rowIndex * 10)}`}
+                        width={64}
+                        height={64}
+                        className="h-16 w-auto object-contain"
+                        loading="eager"
+                    />
+                </div>
+            ))}
+        </motion.div>
+    );
+
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-            <div
+            <div 
                 className="absolute inset-0 z-0"
                 style={{
-                    backgroundImage: 'url("/globe-background.webp")',
+                    backgroundImage: 'url(/globe-background.webp)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat'
@@ -46,9 +99,9 @@ export function Hero() {
                         <p className="text-lg md:text-xl text-white/90 mb-8">
                             Transforming brands across continents with multilingual expertise and cultural intelligence.
                         </p>
-                        <Button
-                            size="lg"
-                            variant="outline"
+                        <Button 
+                            size="lg" 
+                            variant="outline" 
                             className="bg-white/10 hover:bg-white/20 text-white border-white/20"
                             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                         >
@@ -60,7 +113,7 @@ export function Hero() {
 
             {/* Trust Building Section */}
             <motion.div 
-                className="relative z-20 w-full mt-24 py-12"
+                className="relative z-20 w-full mt-0 py-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
@@ -70,45 +123,47 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center mb-20"
+                        className="text-center mb-4"
                     >
                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                             Over a Decade of Global Excellence
                         </h2>
-                        <p className="text-lg text-white/80">
+                        <p className="text-lg text-white/80 mb-4">
                             Trusted by industry leaders across continents
                         </p>
                     </motion.div>
-
                     <div className="overflow-hidden">
-                        {[0, 1, 2].map((row) => (
-                            <motion.div
-                                key={row}
-                                className="flex mb-16"
-                                initial={{ x: row % 2 === 0 ? "0%" : "-100%" }}
-                                animate={{ x: row % 2 === 0 ? "-100%" : "0%" }}
-                                transition={{
-                                    x: {
-                                        repeat: Infinity,
-                                        repeatType: "loop",
-                                        duration: 50,
-                                        ease: "linear",
-                                    },
-                                }}
-                            >
-                                {[...logos.slice(row * 10, (row + 1) * 10), ...logos.slice(row * 10, (row + 1) * 10)].map((logo, index) => (
-                                    <div key={index} className="flex-shrink-0 px-12">
-                                        <img
-                                            src={logo}
-                                            alt={`Client logo ${(index % 10) + 1 + (row * 10)}`}
-                                            className="h-16 w-auto object-contain"
-                                            loading="eager"
-                                        />
-                                    </div>
-                                ))}
-                            </motion.div>
-                        ))}
+                        <AnimatePresence>
+                            {[...Array(expanded ? 3 : rowsToShow)].map((_, index) => (
+                                <LogoRow key={index} rowIndex={index} />
+                            ))}
+                        </AnimatePresence>
                     </div>
+
+                    {rowsToShow < 3 && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 1.5, duration: 0.5 }}
+                            className="text-center mt-1"
+                        >
+                            <Button
+                                variant="outline"
+                                onClick={() => setExpanded(!expanded)}
+                                className="bg-white/10 hover:bg-white/20 text-white border-white/20"
+                            >
+                                {expanded ? (
+                                    <>
+                                        See Less <ChevronUp className="ml-2 h-4 w-4" />
+                                    </>
+                                ) : (
+                                    <>
+                                        See More <ChevronDown className="ml-2 h-4 w-4" />
+                                    </>
+                                )}
+                            </Button>
+                        </motion.div>
+                    )}
                 </div>
             </motion.div>
         </section>
