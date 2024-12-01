@@ -9,7 +9,11 @@ export function Contact() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Let's Work Together</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your brand? Fill out the form below and our team will get back to you within 24 hours.
+            Ready to transform your brand? Fill out the form below or email us directly at{' '}
+            <a href="mailto:contact@blancoba.com" className="text-primary hover:underline">
+              contact@blancoba.com
+            </a>
+            . Our team will get back to you within 24 hours.
           </p>
         </div>
         <ContactForm />
