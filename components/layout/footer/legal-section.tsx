@@ -39,12 +39,12 @@ export function LegalSection() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
               <div>
                 <h3 className="font-semibold mb-2">Impressum</h3>
-                <p className="text-sm text-muted-foreground">
-                  BLANCO Consulting<br />
-                  Sprengelstraße 39<br />
-                  13353 Berlin, Germany<br />
-                  VAT ID: DE123456789
-                </p>
+                  <p className="text-sm text-muted-foreground">
+                      BLANCO Consulting<br/>
+                      Pablo Blanco<br/>
+                      Sprengelstraße 39<br/>
+                      13353 Berlin, Germany<br/>
+                  </p>
               </div>
 
               <div>
@@ -74,9 +74,8 @@ export function LegalSection() {
               <div>
                 <h3 className="font-semibold mb-2">Contact Information</h3>
                 <p className="text-sm text-muted-foreground">
-                  Email: legal@blancoconsulting.com<br />
+                  Email: mail@blancoconsulting.com<br />
                   Phone: +49 30 123456789<br />
-                  Fax: +49 30 987654321
                 </p>
               </div>
 
