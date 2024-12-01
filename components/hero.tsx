@@ -117,7 +117,7 @@ export function Hero() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
             >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto w-full">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ export function Hero() {
                             Trusted by industry leaders across continents
                         </p>
                     </motion.div>
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden w-full">
                         <AnimatePresence>
                             {[...Array(expanded ? 3 : rowsToShow)].map((_, index) => (
                                 <LogoRow key={index} rowIndex={index} />
