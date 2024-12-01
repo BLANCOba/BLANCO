@@ -42,7 +42,7 @@ export function LegalSection() {
               <div>
                 <h3 className="font-semibold mb-2">Impressum</h3>
                 <p className="text-sm text-muted-foreground">
-                  BLANCO Consulting<br/>
+                  BLANCO Business Associates<br/>
                   Pablo Blanco<br/>
                   Sprengelstraße 39<br/>
                   13353 Berlin, Germany<br/>

@@ -4,11 +4,11 @@ export const termsOfService = {
   content: {
     introduction: {
       title: 'Terms of Service',
-      text: 'By engaging BLANCO Consulting for services, you agree to the terms outlined below. These terms govern the relationship between BLANCO Consulting and our clients for marketing, branding, and related services.'
+      text: 'By engaging BLANCO Business Associates for services, you agree to the terms outlined below. These terms govern the relationship between BLANCO Business Associates and our clients for marketing, branding, and related services.'
     },
     services: {
       title: '1. Scope of Services',
-      text: 'BLANCO Consulting provides marketing, branding, and related consultancy services as agreed upon in the proposal or contract. Any additional work outside the agreed scope will require a separate agreement.'
+      text: 'BLANCO Business Associates provides marketing, branding, and related consultancy services as agreed upon in the proposal or contract. Any additional work outside the agreed scope will require a separate agreement.'
     },
     payment: {
       title: '2. Fees and Payment Terms',
@@ -32,7 +32,7 @@ export const termsOfService = {
       sections: [
         {
           title: '3.1 Ownership',
-          text: 'All deliverables created during the project will remain the property of BLANCO Consulting until full payment is received.'
+          text: 'All deliverables created during the project will remain the property of BLANCO Business Associates until full payment is received.'
         },
         {
           title: '3.2 Usage Rights',
@@ -40,7 +40,7 @@ export const termsOfService = {
         },
         {
           title: '3.3 Attribution',
-          text: 'BLANCO Consulting reserves the right to showcase completed projects in portfolios and marketing materials unless otherwise agreed.'
+          text: 'BLANCO Business Associates reserves the right to showcase completed projects in portfolios and marketing materials unless otherwise agreed.'
         }
       ]
     },
@@ -57,17 +57,17 @@ export const termsOfService = {
       sections: [
         {
           title: '5.1 Termination by Client',
-          text: 'Clients may terminate the contract at any time with written notice. Refunds of deposits will be at the discretion of BLANCO Consulting, based on work already completed.'
+          text: 'Clients may terminate the contract at any time with written notice. Refunds of deposits will be at the discretion of BLANCO Business Associates, based on work already completed.'
         },
         {
-          title: '5.2 Termination by BLANCO Consulting',
+          title: '5.2 Termination by BLANCO Business Associates',
           text: 'We reserve the right to terminate the contract if the client fails to fulfill their responsibilities or violates these terms.'
         }
       ]
     },
     liability: {
       title: '6. Limitation of Liability',
-      text: 'BLANCO Consulting will not be held liable for any indirect, consequential, or incidental damages arising from the use of our services. Our total liability is limited to the amount paid by the client for the specific project.'
+      text: 'BLANCO Business Associates will not be held liable for any indirect, consequential, or incidental damages arising from the use of our services. Our total liability is limited to the amount paid by the client for the specific project.'
     },
     disputeResolution: {
       title: '7. Governing Law and Dispute Resolution',
@@ -75,7 +75,7 @@ export const termsOfService = {
     },
     contact: {
       title: '8. Contact Information',
-      text: 'For any questions regarding these terms, please contact us at: info@blancoconsulting.com.'
+      text: 'For any questions regarding these terms, please contact us at: privacy@blancoba.com.'
     }
   }
 };

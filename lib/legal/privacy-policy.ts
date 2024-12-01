@@ -4,7 +4,7 @@ export const privacyPolicy = {
   content: {
     introduction: {
       title: 'Privacy Policy',
-      text: 'At BLANCO Consulting, we respect your privacy. This Privacy Policy outlines the data we collect and how we use it to enhance your experience on our website.'
+      text: 'At BLANCO Business Associates, we respect your privacy. This Privacy Policy outlines the data we collect and how we use it to enhance your experience on our website.'
     },
     dataCollection: {
       title: '1. Data We Collect',
@@ -46,7 +46,7 @@ export const privacyPolicy = {
     contact: {
       title: '6. Contact Us',
       details: {
-        email: 'privacy@blancoconsulting.com'
+        email: 'privacy@blancoba.com'
       }
     }
   }
