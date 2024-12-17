@@ -4,6 +4,9 @@ import { Services } from '@/components/services';
 import { Locations } from '@/components/locations';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/layout/footer';
+import type {Metadata} from "next";
+
+
 
 export default function Home() {
   return (

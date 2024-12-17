@@ -8,6 +8,7 @@ import {termsOfService } from '@/lib/legal/terms-of-service';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
+
 interface PolicyContentProps {
   type: 'privacy' | 'disclaimer' | 'terms';
   onClose: () => void;

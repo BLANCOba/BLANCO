@@ -11,8 +11,6 @@ const logos = [
     '/logo6.png', '/logo7.png', '/logo8.png', '/logo9.png', '/logo10.png',
     '/logo11.png', '/logo12.png', '/logo13.png', '/logo14.png', '/logo15.png',
     '/logo16.png', '/logo17.png', '/logo18.png', '/logo19.png', '/logo20.png',
-    '/logo21.png', '/logo22.png', '/logo23.png', '/logo24.png', '/logo25.png',
-    '/logo26.png', '/logo27.png', '/logo28.png', '/logo29.png', '/logo30.png',
 ];
 
 export function Hero() {
@@ -37,38 +35,38 @@ export function Hero() {
     }, []);
 
     const LogoRow = ({ rowIndex }: { rowIndex: number }) => (
-      <motion.div
-        key={rowIndex}
-        className="flex mb-6"
-        initial={{ x: rowIndex % 2 === 0 ? "0%" : "-100%" }}
-        animate={{ x: rowIndex % 2 === 0 ? "-100%" : "0%" }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 50,
-            ease: "linear",
-          },
-        }}
-      >
-        {[...logos.slice(rowIndex * 10, (rowIndex + 1) * 10), ...logos.slice(rowIndex * 10, (rowIndex + 1) * 10)].map((logo, index) => (
-          <div key={index} className="flex-shrink-0 px-12">
-            <Image
-              src={logo}
-              alt={`Client logo ${(index % 10) + 1 + (rowIndex * 10)}`}
-              width={128}
-              height={64}
-              className="h-16 w-auto object-contain"
-              loading="eager"
-            />
-          </div>
-        ))}
-      </motion.div>
+        <motion.div
+            key={rowIndex}
+            className="flex mb-6"
+            initial={{ x: rowIndex % 2 === 0 ? "0%" : "-100%" }}
+            animate={{ x: rowIndex % 2 === 0 ? "-100%" : "0%" }}
+            transition={{
+                x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 50,
+                    ease: "linear",
+                },
+            }}
+        >
+            {[...logos.slice(rowIndex * 10, (rowIndex + 1) * 10), ...logos.slice(rowIndex * 10, (rowIndex + 1) * 10)].map((logo, index) => (
+                <div key={index} className="flex-shrink-0 px-6 sm:px-12">
+                    <Image
+                        src={logo}
+                        alt={`Client logo ${(index % 10) + 1 + (rowIndex * 10)}`}
+                        width={128}
+                        height={64}
+                        className="h-12 sm:h-16 w-auto object-contain"
+                        loading="eager"
+                    />
+                </div>
+            ))}
+        </motion.div>
     );
 
     return (
         <section className="relative min-h-screen flex flex-col justify-end portrait:justify-center overflow-hidden">
-            <div 
+            <div
                 className="absolute inset-0 z-0"
                 style={{
                     backgroundImage: 'url(/globe-background.webp)',
@@ -91,19 +89,19 @@ export function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 1 }}
-                        className="backdrop-blur-md bg-white/10 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto"
+                        className="backdrop-blur-md bg-white/10 rounded-2xl p-6 sm:p-8 md:p-12 max-w-3xl mx-auto"
                     >
-                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 sm:mb-6">
                             Innovating Brands Across Borders.
                         </h1>
-                        <p className="text-lg md:text-xl text-white/90 mb-8">
+                        <p className="text-sm sm:text-lg md:text-xl text-white/90 mb-4 sm:mb-8">
                             Empowering businesses worldwide with multilingual expertise and culturally-tailored solutions.
                         </p>
 
-                        <Button 
-                            size="lg" 
-                            variant="outline" 
-                            className="bg-white/10 hover:bg-white/20 text-white border-white/20"
+                        <Button
+                            size="lg"
+                            variant="outline"
+                            className="bg-white/10 hover:bg-white/20 text-white border-white/20 w-full sm:w-auto"
                             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                         >
                             Let’s Build Your Global Brand
@@ -112,7 +110,7 @@ export function Hero() {
                 </motion.div>
             </div>
 
-            <motion.div 
+            <motion.div
                 className="relative z-20 w-full py-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -125,10 +123,10 @@ export function Hero() {
                         transition={{ duration: 0.8 }}
                         className="text-center mb-4"
                     >
-                        <h2 className="text-2xl md:text-2xl font-extralight text-white mb-4">
-                            12+ Years of Trusted Partnerships Worldwide.
+                        <h2 className="text-lg sm:text-2xl font-extralight text-white mb-2">
+                            15+ Years of Trusted Partnerships Worldwide.
                         </h2>
-                        <p className="text-lg text-white/80 mb-16 ">
+                        <p className="text-sm sm:text-lg text-white/80">
                             Helping brands grow and thrive in markets around the world.
                         </p>
                     </motion.div>
@@ -145,7 +143,7 @@ export function Hero() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 1.5, duration: 0.5 }}
-                            className="text-center mt-1"
+                            className="text-center mt-2"
                         >
                             <Button
                                 variant="ghost"

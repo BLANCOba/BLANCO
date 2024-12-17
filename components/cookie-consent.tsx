@@ -1,74 +1,50 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { PolicyContent } from '@/components/legal/policy-content';
+import { usePolicy } from '@/app/layout';
 
 export function CookieConsent() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedPolicy, setSelectedPolicy] = useState<PolicyType>(null);
+    const [isVisible, setIsVisible] = useState(false);
+    const { openPolicy } = usePolicy();
 
-  useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent');
-    if (!consent) {
-      setIsVisible(true);
-    }
-  }, []);
+    useEffect(() => {
+        const consent = localStorage.getItem('cookie-consent');
+        if (!consent) setIsVisible(true);
+    }, []);
 
-  const acceptCookies = () => {
-    localStorage.setItem('cookie-consent', 'accepted');
-    setIsVisible(false);
-  };
+    const acceptCookies = () => {
+        localStorage.setItem('cookie-consent', 'accepted');
+        setIsVisible(false);
+    };
 
-  const handlePolicyClick = () => {
-    setSelectedPolicy('privacy');
-    setIsVisible(false);
-  };
-
-  return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.3 }}
-          className="fixed bottom-4 left-4 z-50 w-[400px] p-1"
+    return isVisible ? (
+        <div
+            className="fixed bottom-4 left-4 right-4 md:left-4 md:right-auto md:w-[600px] p-4 bg-neutral-900/80
+                 text-gray-300 rounded-md shadow-lg z-50 flex flex-col md:flex-row items-center
+                 justify-between gap-4 border border-neutral-700"
         >
-          <div className="relative bg-card/95 backdrop-blur-sm rounded-lg shadow-lg border p-5">
-            <div className="space-y-3">
-              <p className="text-sm text-muted-foreground">
-                We use cookies to enhance your browsing experience. By continuing, you agree to our data policy.
-              </p>
+            {/* Text Section */}
+            <p className="text-sm leading-relaxed md:text-left flex-1">
+                We use cookies to enhance your experience. By continuing, you agree to our{' '}
+                <button
+                    onClick={() => openPolicy('privacy')}
+                    className="underline hover:text-gray-100 transition-colors"
+                >
+                    Privacy Policy
+                </button>.
+            </p>
 
-              <div className="flex items-center justify-between gap-2">
+            {/* Button Section */}
+            <div className="flex-shrink-0">
                 <Button
-                  variant="outline"
-                  size="sm"
-                  className="text-xs"
-                  onClick={handlePolicyClick}
+                    onClick={acceptCookies}
+                    className="bg-neutral-800/80 hover:bg-neutral-700/90 text-gray-300 hover:text-gray-100
+                     text-sm py-1 px-4 rounded border border-neutral-700 transition-all"
                 >
-                  Review Policy
+                    Got It
                 </Button>
-                <Button
-                  size="sm"
-                  className="text-xs"
-                  onClick={acceptCookies}
-                >
-                  Got It
-                </Button>
-              </div>
             </div>
-          </div>
-        </motion.div>
-      )}
-      {selectedPolicy && (
-        <PolicyContent
-          type={selectedPolicy}
-          onClose={() => setSelectedPolicy(null)}
-        />
-      )}
-    </AnimatePresence>
-  );
+        </div>
+    ) : null;
 }

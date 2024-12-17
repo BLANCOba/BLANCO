@@ -11,7 +11,7 @@ export function Footer() {
         <div className="py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © {currentYear} BLANCO Business Associates. All rights reserved.
+              © {currentYear} Blanco Business Associates. All rights reserved.
             </div>
             <LegalSection />
           </div>
