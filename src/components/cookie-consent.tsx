@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { usePolicy } from '@/app/layout';
+import {useState, useEffect} from 'react';
+import {Button} from '@/components/ui/button';
+import {usePolicy} from "@/components/policy-provider";
 
 export function CookieConsent() {
     const [isVisible, setIsVisible] = useState(false);
-    const { openPolicy } = usePolicy();
+    const {openPolicy} = usePolicy();
 
     useEffect(() => {
         const consent = localStorage.getItem('cookie-consent');
@@ -32,7 +32,8 @@ export function CookieConsent() {
                     className="underline hover:text-gray-100 transition-colors"
                 >
                     Privacy Policy
-                </button>.
+                </button>
+                .
             </p>
 
             {/* Button Section */}
