@@ -11,7 +11,7 @@ export function Logo() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex-shrink-0"
+      className="shrink-0"
     >
       <img
           src="/blancomedia_logo_white.png"

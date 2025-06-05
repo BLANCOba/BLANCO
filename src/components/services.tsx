@@ -81,7 +81,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-background to-muted">
+    <section id="services" className="py-24 bg-linear-to-b from-background to-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

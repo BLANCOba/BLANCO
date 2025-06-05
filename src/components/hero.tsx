@@ -50,7 +50,7 @@ export function Hero() {
             }}
         >
             {[...logos.slice(rowIndex * 10, (rowIndex + 1) * 10), ...logos.slice(rowIndex * 10, (rowIndex + 1) * 10)].map((logo, index) => (
-                <div key={index} className="flex-shrink-0 px-6 sm:px-12">
+                <div key={index} className="shrink-0 px-6 sm:px-12">
                     <Image
                         src={logo}
                         alt={`Client logo ${(index % 10) + 1 + (rowIndex * 10)}`}
@@ -76,7 +76,7 @@ export function Hero() {
                 }}
             />
 
-            <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/40 to-black/60" />
+            <div className="absolute inset-0 z-10 bg-linear-to-b from-black/40 to-black/60" />
 
             <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-6">
                 <motion.div

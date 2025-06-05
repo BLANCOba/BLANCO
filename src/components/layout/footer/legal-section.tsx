@@ -36,7 +36,7 @@ export function LegalSection() {
             animate={{ opacity: 0.999 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="absolute bottom-full right-0 mb-4 w-[calc(100vw-2rem)] md:w-[calc(100vw-4rem)] lg:w-[1024px] bg-muted/95 backdrop-blur-sm rounded-lg shadow-lg max-h-[80vh] overflow-y-auto"
+            className="absolute bottom-full right-0 mb-4 w-[calc(100vw-2rem)] md:w-[calc(100vw-4rem)] lg:w-[1024px] bg-muted/95 backdrop-blur-xs rounded-lg shadow-lg max-h-[80vh] overflow-y-auto"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 p-4 sm:p-6 lg:p-8">
               <div>

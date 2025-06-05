@@ -1,12 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { privacyPolicy } from '@/lib/legal/privacy-policy';
-import { disclaimer } from '@/lib/legal/disclaimer';
-import {termsOfService } from '@/lib/legal/terms-of-service';
-import { Button } from '@/components/ui/button';
-import { ScrollArea } from '@/components/ui/scroll-area';
+import {motion} from 'framer-motion';
+import {privacyPolicy} from '@/lib/legal/privacy-policy';
+import {disclaimer} from '@/lib/legal/disclaimer';
+import {termsOfService} from '@/lib/legal/terms-of-service';
+import {Button} from '@/components/ui/button';
+import {ScrollArea} from '@/components/ui/scroll-area';
 
 
 interface PolicyContentProps {
@@ -41,7 +40,7 @@ export function PolicyContent({ type, onClose }: PolicyContentProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
-      className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm"
+      className="fixed inset-0 z-50 bg-background/80 backdrop-blur-xs"
     >
       <div className="fixed inset-x-4 top-4 bottom-4 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-[640px] lg:w-[800px]">
         <div className="h-full bg-card rounded-lg shadow-lg border flex flex-col">

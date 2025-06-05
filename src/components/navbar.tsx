@@ -25,12 +25,12 @@ export default function Navbar() {
   return (
     <motion.nav
       style={{ backgroundColor }}
-      className="fixed w-full z-50 backdrop-blur-sm"
+      className="fixed w-full z-50 backdrop-blur-xs"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <motion.div
-              className="flex-shrink-0 flex items-center"
+              className="shrink-0 flex items-center"
               initial={{opacity: 0}}
               animate={{opacity: 1}}
               transition={{duration: 0.5}}

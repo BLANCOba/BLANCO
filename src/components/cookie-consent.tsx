@@ -36,7 +36,7 @@ export function CookieConsent() {
             </p>
 
             {/* Button Section */}
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
                 <Button
                     onClick={acceptCookies}
                     className="bg-neutral-800/80 hover:bg-neutral-700/90 text-gray-300 hover:text-gray-100
