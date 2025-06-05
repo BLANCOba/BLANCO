@@ -3,12 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "export": "next build && next export",
-    "static-build": "node build-static.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -73,5 +71,6 @@
   },
   "devDependencies": {
     "esbuild": "^0.24.0"
-  }
+  },
+  "packageManager": "yarn@4.9.1"
 }
