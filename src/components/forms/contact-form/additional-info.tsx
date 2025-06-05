@@ -1,25 +1,12 @@
 'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {useForm} from 'react-hook-form';
 import * as z from 'zod';
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage,
-} from '@/components/ui/form';
-import { Textarea } from '@/components/ui/textarea';
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from '@/components/ui/select';
-import { Button } from '@/components/ui/button';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from '@/components/ui/form';
+import {Textarea} from '@/components/ui/textarea';
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from '@/components/ui/select';
+import {Button} from '@/components/ui/button';
 
 const formSchema = z.object({
     referralSource: z.string().min(1, 'Please select how you heard about us'),
@@ -34,7 +21,7 @@ interface AdditionalInfoProps {
     initialData?: Partial<z.infer<typeof formSchema>>; // ✅ Pre-filled data
 }
 
-export function AdditionalInfo({ onSubmit, onBack, initialData }: AdditionalInfoProps) {
+export function AdditionalInfo({onSubmit, onBack, initialData}: AdditionalInfoProps) {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: initialData || {}, // ✅ Set initial data if available
@@ -50,13 +37,13 @@ export function AdditionalInfo({ onSubmit, onBack, initialData }: AdditionalInfo
                 <FormField
                     control={form.control}
                     name="referralSource"
-                    render={({ field }) => (
+                    render={({field}) => (
                         <FormItem>
                             <FormLabel>How did you hear about us?</FormLabel>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
                                     <SelectTrigger>
-                                        <SelectValue placeholder="Select source" />
+                                        <SelectValue placeholder="Select source"/>
                                     </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
@@ -67,7 +54,7 @@ export function AdditionalInfo({ onSubmit, onBack, initialData }: AdditionalInfo
                                     <SelectItem value="other">Other</SelectItem>
                                 </SelectContent>
                             </Select>
-                            <FormMessage />
+                            <FormMessage/>
                         </FormItem>
                     )}
                 />
@@ -75,13 +62,13 @@ export function AdditionalInfo({ onSubmit, onBack, initialData }: AdditionalInfo
                 <FormField
                     control={form.control}
                     name="projectBudget"
-                    render={({ field }) => (
+                    render={({field}) => (
                         <FormItem>
                             <FormLabel>Preferred Project Budget Range</FormLabel>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
                                     <SelectTrigger>
-                                        <SelectValue placeholder="Select budget range" />
+                                        <SelectValue placeholder="Select budget range"/>
                                     </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
@@ -92,7 +79,7 @@ export function AdditionalInfo({ onSubmit, onBack, initialData }: AdditionalInfo
                                     <SelectItem value="100k+">$100,000+</SelectItem>
                                 </SelectContent>
                             </Select>
-                            <FormMessage />
+                            <FormMessage/>
                         </FormItem>
                     )}
                 />
@@ -100,7 +87,7 @@ export function AdditionalInfo({ onSubmit, onBack, initialData }: AdditionalInfo
                 <FormField
                     control={form.control}
                     name="previousEfforts"
-                    render={({ field }) => (
+                    render={({field}) => (
                         <FormItem>
                             <FormLabel>Previous Branding/Marketing Efforts</FormLabel>
                             <FormControl>
@@ -110,7 +97,7 @@ export function AdditionalInfo({ onSubmit, onBack, initialData }: AdditionalInfo
                                     {...field}
                                 />
                             </FormControl>
-                            <FormMessage />
+                            <FormMessage/>
                         </FormItem>
                     )}
                 />
@@ -118,7 +105,7 @@ export function AdditionalInfo({ onSubmit, onBack, initialData }: AdditionalInfo
                 <FormField
                     control={form.control}
                     name="additionalInfo"
-                    render={({ field }) => (
+                    render={({field}) => (
                         <FormItem>
                             <FormLabel>Additional Information</FormLabel>
                             <FormControl>
@@ -128,7 +115,7 @@ export function AdditionalInfo({ onSubmit, onBack, initialData }: AdditionalInfo
                                     {...field}
                                 />
                             </FormControl>
-                            <FormMessage />
+                            <FormMessage/>
                         </FormItem>
                     )}
                 />

@@ -15,7 +15,7 @@ export const formats: Formats = {
     number: {
         precise: {
             maximumFractionDigits: 5
-        }
+        },
     },
     list: {
         enumeration: {

@@ -24,7 +24,7 @@ const languages: { code: Locale, name: string }[] = [
 
 export function LanguagePicker() {
     const locale = useLocale();
-    const t = useTranslations();
+    const t = useTranslations('header');
     const router = useRouter();
     const pathname = usePathname();
     return (

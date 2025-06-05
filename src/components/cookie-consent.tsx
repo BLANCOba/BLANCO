@@ -1,12 +1,14 @@
 'use client';
 
-import {useState, useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {usePolicy} from "@/components/policy-provider";
+import {useTranslations} from 'next-intl';
 
 export function CookieConsent() {
     const [isVisible, setIsVisible] = useState(false);
     const {openPolicy} = usePolicy();
+    const t = useTranslations('cookies');
 
     useEffect(() => {
         const consent = localStorage.getItem('cookie-consent');
@@ -26,14 +28,14 @@ export function CookieConsent() {
         >
             {/* Text Section */}
             <p className="text-sm leading-relaxed md:text-left flex-1">
-                We use cookies to enhance your experience. By continuing, you agree to our{' '}
-                <button
-                    onClick={() => openPolicy('privacy')}
-                    className="underline hover:text-gray-100 transition-colors"
-                >
-                    Privacy Policy
-                </button>
-                .
+                {t.rich('content', {
+                    privacyPolicy: (chunks) => <button
+                        onClick={() => openPolicy('privacy')}
+                        className="underline hover:text-gray-100 transition-colors"
+                    >
+                        {chunks}
+                    </button>
+                })}
             </p>
 
             {/* Button Section */}
@@ -43,7 +45,7 @@ export function CookieConsent() {
                     className="bg-neutral-800/80 hover:bg-neutral-700/90 text-gray-300 hover:text-gray-100
                      text-sm py-1 px-4 rounded border border-neutral-700 transition-all"
                 >
-                    Got It
+                    {t('acceptButton')}
                 </Button>
             </div>
         </div>

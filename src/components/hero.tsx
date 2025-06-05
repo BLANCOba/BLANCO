@@ -5,6 +5,7 @@ import {Button} from '@/components/ui/button';
 import {useEffect, useState} from 'react';
 import {ChevronDown, ChevronUp} from 'lucide-react';
 import Image from "next/image";
+import {useTranslations} from 'next-intl';
 
 const logos = [
     '/logo1.png', '/logo2.png', '/logo3.png', '/logo4.png', '/logo5.png',
@@ -14,6 +15,7 @@ const logos = [
 ];
 
 export function Hero() {
+    const t = useTranslations('hero');
     const [expanded, setExpanded] = useState(false);
     const [rowsToShow, setRowsToShow] = useState(1);
 
@@ -91,11 +93,10 @@ export function Hero() {
                         className="backdrop-blur-md bg-white/10 rounded-2xl p-6 sm:p-8 md:p-12 max-w-3xl mx-auto"
                     >
                         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 sm:mb-6">
-                            Innovating Brands Across Borders.
+                            {t('title')}
                         </h1>
                         <p className="text-sm sm:text-lg md:text-xl text-white/90 mb-4 sm:mb-8">
-                            Empowering businesses worldwide with multilingual expertise and culturally-tailored
-                            solutions.
+                            {t('subtitle')}
                         </p>
 
                         <Button
@@ -104,7 +105,7 @@ export function Hero() {
                             className="bg-white/10 hover:bg-white/20 text-white border-white/20 w-full sm:w-auto"
                             onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
                         >
-                            Let’s Build Your Global Brand
+                            {t('ctaButton')}
                         </Button>
                     </motion.div>
                 </motion.div>
@@ -124,10 +125,10 @@ export function Hero() {
                         className="text-center mb-4"
                     >
                         <h2 className="text-lg sm:text-2xl font-extralight text-white mb-2">
-                            15+ Years of Trusted Partnerships Worldwide.
+                            {t('trustSection.heading')}
                         </h2>
                         <p className="text-sm sm:text-lg text-white/80">
-                            Helping brands grow and thrive in markets around the world.
+                            {t('trustSection.subtitle')}
                         </p>
                     </motion.div>
                     <div className="overflow-hidden w-full">
@@ -152,11 +153,11 @@ export function Hero() {
                             >
                                 {expanded ? (
                                     <>
-                                        See Less <ChevronUp className="ml-2 h-4 w-4"/>
+                                        {t('buttons.seeLess')} <ChevronUp className="ml-2 h-4 w-4"/>
                                     </>
                                 ) : (
                                     <>
-                                        See More <ChevronDown className="ml-2 h-4 w-4"/>
+                                        {t('buttons.seeMore')} <ChevronDown className="ml-2 h-4 w-4"/>
                                     </>
                                 )}
                             </Button>

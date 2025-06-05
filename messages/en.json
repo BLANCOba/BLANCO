@@ -1,5 +1,153 @@
 {
-  "language": {
-    "select": "Select Language"
+  "header": {
+    "language": {
+      "select": "Select Language"
+    },
+    "getInTouch": "Get in Touch",
+    "menuItems": [
+      "About",
+      "Services",
+      "Locations",
+      "Contact"
+    ]
+  },
+  "footer": {
+    "copyright": "© {year} Blanco Business Associates. All rights reserved.",
+    "legalSection": {
+      "legalNotice": {
+        "title": "Legal Notice"
+      },
+      "documents": {
+        "title": "Legal Documents",
+        "disclaimer": "Disclaimer",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+      },
+      "contact": {
+        "title": "Contact Information",
+        "email": "Email:",
+        "phone": "Phone:"
+      },
+      "compliance": {
+        "title": "Compliance",
+        "description": "We adhere to GDPR, CCPA, and other applicable data protection regulations. For more information, please review our Privacy Policy."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "description": "Ready to transform your brand? Fill out the form below or email us directly at <email></email>. Our team will get back to you within 24 hours."
+  },
+  "cookies": {
+    "content": "We use cookies to enhance your experience. By continuing, you agree to our <privacyPolicy>Privacy Policy</privacyPolicy>.",
+    "acceptButton": "Got It"
+  },
+  "hero": {
+    "title": "Innovating Brands Across Borders.",
+    "subtitle": "Empowering businesses worldwide with multilingual expertise and culturally-tailored solutions.",
+    "ctaButton": "Let's Build Your Global Brand",
+    "trustSection": {
+      "heading": "15+ Years of Trusted Partnerships Worldwide.",
+      "subtitle": "Helping brands grow and thrive in markets around the world."
+    },
+    "buttons": {
+      "seeMore": "See More",
+      "seeLess": "See Less"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive branding and marketing solutions delivered by our multilingual team across four continents",
+    "branding": {
+      "title": "Brand Strategy",
+      "description": "Helping brands establish their identity and stand out in competitive markets. ",
+      "features": [
+        "Brand Audit",
+        "Brand Identity Development",
+        "Brand Positioning",
+        "Brand Guidelines"
+      ]
+    },
+    "marketing": {
+      "title": "Marketing Strategy",
+      "description": "Creating data-driven strategies to connect with target audiences and drive growth.",
+      "features": [
+        "Competitor Analysis",
+        "Market Research",
+        "Digital Marketing Campaigns",
+        "SEO Optimization"
+      ]
+    },
+    "creative": {
+      "title": "Creative Strategy",
+      "description": "Transforming ideas into compelling campaigns that resonate across channels.",
+      "features": [
+        "Campaign Concept Development",
+        "Content Strategy",
+        "Storytelling",
+        "Creative Direction"
+      ]
+    },
+    "communication": {
+      "title": "Visual Communication",
+      "description": "Delivering designs that elevate brand presence and ensure clear messaging.",
+      "features": [
+        "Logo Design",
+        "Branded Collaterals",
+        "UI/UX Design",
+        "Print Design"
+      ]
+    },
+    "technical": {
+      "title": "Technical Services",
+      "description": "Empowering businesses with robust digital solutions and seamless technology integration.",
+      "features": [
+        "Web Development",
+        "Analytics Integration",
+        "IT Support",
+        "App Development"
+      ]
+    },
+    "content": {
+      "title": "Content Creation",
+      "description": "Producing engaging content to amplify your brand’s voice and reach.",
+      "features": [
+        "Copywriting",
+        "Translation",
+        "Social Media",
+        "Video Production"
+      ]
+    }
+  },
+  "locations": {
+    "title": "Global Presence",
+    "subtitle": "Strategic locations across four continents",
+    "cities": {
+      "tokyo": {
+        "city": "Tokyo",
+        "country": "Japan",
+        "description": "Innovative hub bridging Eastern traditions with Western advancements"
+      },
+      "berlin": {
+        "city": "Berlin",
+        "country": "Germany",
+        "description": "Vibrant melting pot of art, technology, and forward-thinking business"
+      },
+      "barcelona": {
+        "city": "Barcelona",
+        "country": "Spain",
+        "description": "Mediterranean nexus of creativity, culture, and cutting-edge innovation"
+      },
+      "montevideo": {
+        "city": "Montevideo",
+        "country": "Uruguay",
+        "description": "Emerging tech center and gateway to Latin American markets"
+      },
+      "bangkok": {
+        "city": "Bangkok",
+        "country": "Thailand",
+        "description": "Dynamic crossroads of Southeast Asian commerce and digital transformation"
+      }
+    }
   }
 }
