@@ -9,6 +9,7 @@ import {notFound} from "next/navigation";
 import {ThemeProvider} from "next-themes";
 import {setRequestLocale} from "next-intl/server";
 import {Metadata} from "next";
+import React, {ReactNode} from "react";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -33,7 +34,7 @@ export default async function LocaleLayout({
                                                children,
                                                params
                                            }: {
-    children: React.ReactNode;
+    children: ReactNode;
     params: Promise<{ locale: string }>;
 }) {
     // Ensure that the incoming `locale` is valid
