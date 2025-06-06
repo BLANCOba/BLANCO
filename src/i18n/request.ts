@@ -16,6 +16,12 @@ export const formats: Formats = {
         precise: {
             maximumFractionDigits: 5
         },
+        currency: {
+            currency: 'USD',
+            currencyDisplay: 'symbol',
+            currencySign: 'standard',
+            maximumFractionDigits: 0
+        }
     },
     list: {
         enumeration: {

@@ -1,68 +1,58 @@
 'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {useForm} from 'react-hook-form';
 import * as z from 'zod';
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage,
-} from '@/components/ui/form';
-import { Textarea } from '@/components/ui/textarea';
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from '@/components/ui/select';
-import { Button } from '@/components/ui/button';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from '@/components/ui/form';
+import {Textarea} from '@/components/ui/textarea';
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from '@/components/ui/select';
+import {Button} from '@/components/ui/button';
+import {useTranslations} from "use-intl";
 
-const formSchema = z.object({
-    painPoints: z.string().min(10, 'Please describe your challenges in more detail'),
-    competitors: z.string().min(2, 'Please provide competitor information'),
-    targetAudience: z.string().min(10, 'Please describe your target audience'),
-    marketingBudget: z.string().min(1, 'Please select a budget range'),
-    timeline: z.string().min(1, 'Please select a timeline'),
-});
+const useFormSchema = () => {
+    const t = useTranslations('contactForm');
+    return z.object({
+        painPoints: z.string().min(10, t('businessChallenges.painPoints.invalid')).optional(),
+        competitors: z.string().optional(),
+        targetAudience: z.string().min(10, t('businessChallenges.targetAudience.invalid')).optional(),
+        marketingBudget: z.string().optional(),
+        timeline: z.string().optional(),
+    });
+};
+
+export type BusinessChallengesSchema = z.infer<ReturnType<typeof useFormSchema>>;
 
 interface BusinessChallengesProps {
-    onNext: (data: z.infer<typeof formSchema>) => void;
+    onNext: (data: BusinessChallengesSchema) => void;
     onBack: () => void;
-    initialData?: Partial<z.infer<typeof formSchema>>; // ✅ Add initialData prop
+    initialData?: Partial<BusinessChallengesSchema>; // ✅ Add initialData prop
 }
 
-export function BusinessChallenges({ onNext, onBack, initialData }: BusinessChallengesProps) {
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
+export function BusinessChallenges({onNext, onBack, initialData}: BusinessChallengesProps) {
+    const t = useTranslations('contactForm');
+
+    const form = useForm<BusinessChallengesSchema>({
+        resolver: zodResolver(useFormSchema()),
         defaultValues: initialData || {} // ✅ Set the initial form values
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log('Form submitted with values:', values);
-        onNext(values); // Pass the form data to onNext
-    }
-
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onNext)} className="space-y-6">
                 <FormField
                     control={form.control}
                     name="painPoints"
-                    render={({ field }) => (
+                    render={({field}) => (
                         <FormItem>
-                            <FormLabel>Current Marketing/Branding Challenges</FormLabel>
+                            <FormLabel>{t('businessChallenges.painPoints.label')}</FormLabel>
                             <FormControl>
                                 <Textarea
-                                    placeholder="Describe your main marketing and branding challenges..."
+                                    placeholder={t('businessChallenges.timeline.placeholder')}
                                     className="min-h-[100px]"
                                     {...field}
                                 />
                             </FormControl>
-                            <FormMessage />
+                            <FormMessage/>
                         </FormItem>
                     )}
                 />
@@ -70,17 +60,17 @@ export function BusinessChallenges({ onNext, onBack, initialData }: BusinessChal
                 <FormField
                     control={form.control}
                     name="competitors"
-                    render={({ field }) => (
+                    render={({field}) => (
                         <FormItem>
-                            <FormLabel>Main Competitors</FormLabel>
+                            <FormLabel>{t('businessChallenges.competitors.label')}</FormLabel>
                             <FormControl>
                                 <Textarea
-                                    placeholder="List your main competitors..."
+                                    placeholder={t('businessChallenges.competitors.placeholder')}
                                     className="min-h-[80px]"
                                     {...field}
                                 />
                             </FormControl>
-                            <FormMessage />
+                            <FormMessage/>
                         </FormItem>
                     )}
                 />
@@ -88,17 +78,17 @@ export function BusinessChallenges({ onNext, onBack, initialData }: BusinessChal
                 <FormField
                     control={form.control}
                     name="targetAudience"
-                    render={({ field }) => (
+                    render={({field}) => (
                         <FormItem>
-                            <FormLabel>Target Audience Description</FormLabel>
+                            <FormLabel>{t('businessChallenges.targetAudience.label')}</FormLabel>
                             <FormControl>
                                 <Textarea
-                                    placeholder="Describe your target audience..."
+                                    placeholder={t('businessChallenges.targetAudience.placeholder')}
                                     className="min-h-[80px]"
                                     {...field}
                                 />
                             </FormControl>
-                            <FormMessage />
+                            <FormMessage/>
                         </FormItem>
                     )}
                 />
@@ -107,24 +97,35 @@ export function BusinessChallenges({ onNext, onBack, initialData }: BusinessChal
                     <FormField
                         control={form.control}
                         name="marketingBudget"
-                        render={({ field }) => (
+                        render={({field}) => (
                             <FormItem>
-                                <FormLabel>Marketing Budget Range</FormLabel>
+                                <FormLabel>{t('businessChallenges.budget.label')}</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
                                         <SelectTrigger>
-                                            <SelectValue placeholder="Select budget range" />
+                                            <SelectValue placeholder={t('businessChallenges.budget.placeholder')}/>
                                         </SelectTrigger>
                                     </FormControl>
                                     <SelectContent>
-                                        <SelectItem value="0-5k">$0 - $5,000</SelectItem>
-                                        <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
-                                        <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
-                                        <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
-                                        <SelectItem value="50k+">$50,000+</SelectItem>
+                                        <SelectItem
+                                            value="0-5k">{t('businessChallenges.budget.values.lessThan', {amount: 5000})}</SelectItem>
+                                        <SelectItem value="5k-10k">{t('businessChallenges.budget.values.range', {
+                                            from: 5000,
+                                            to: 10000
+                                        })}</SelectItem>
+                                        <SelectItem value="10k-25k">{t('businessChallenges.budget.values.range', {
+                                            from: 10000,
+                                            to: 25000
+                                        })}</SelectItem>
+                                        <SelectItem value="25k-50k">{t('businessChallenges.budget.values.range', {
+                                            from: 25000,
+                                            to: 50000
+                                        })}</SelectItem>
+                                        <SelectItem
+                                            value="50k+">{t('businessChallenges.budget.values.moreThan', {amount: 50000})}</SelectItem>
                                     </SelectContent>
                                 </Select>
-                                <FormMessage />
+                                <FormMessage/>
                             </FormItem>
                         )}
                     />
@@ -132,23 +133,27 @@ export function BusinessChallenges({ onNext, onBack, initialData }: BusinessChal
                     <FormField
                         control={form.control}
                         name="timeline"
-                        render={({ field }) => (
+                        render={({field}) => (
                             <FormItem>
-                                <FormLabel>Desired Timeline</FormLabel>
+                                <FormLabel>{t('businessChallenges.timeline.label')}</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
                                         <SelectTrigger>
-                                            <SelectValue placeholder="Select timeline" />
+                                            <SelectValue placeholder={t('businessChallenges.timeline.placeholder')}/>
                                         </SelectTrigger>
                                     </FormControl>
                                     <SelectContent>
-                                        <SelectItem value="1-month">Within 1 month</SelectItem>
-                                        <SelectItem value="3-months">Within 3 months</SelectItem>
-                                        <SelectItem value="6-months">Within 6 months</SelectItem>
-                                        <SelectItem value="flexible">Flexible</SelectItem>
+                                        <SelectItem
+                                            value="1-month">{t('businessChallenges.timeline.values.within', {months: 1})}</SelectItem>
+                                        <SelectItem
+                                            value="3-months">{t('businessChallenges.timeline.values.within', {months: 3})}</SelectItem>
+                                        <SelectItem
+                                            value="6-months">{t('businessChallenges.timeline.values.within', {months: 6})}</SelectItem>
+                                        <SelectItem
+                                            value="flexible">{t('businessChallenges.timeline.values.flexible')}</SelectItem>
                                     </SelectContent>
                                 </Select>
-                                <FormMessage />
+                                <FormMessage/>
                             </FormItem>
                         )}
                     />
@@ -156,10 +161,10 @@ export function BusinessChallenges({ onNext, onBack, initialData }: BusinessChal
 
                 <div className="flex gap-4">
                     <Button type="button" variant="outline" onClick={onBack} className="flex-1">
-                        Previous
+                        {t('actions.previous')}
                     </Button>
                     <Button type="submit" className="flex-1">
-                        Next Step
+                        {t('actions.next')}
                     </Button>
                 </div>
             </form>

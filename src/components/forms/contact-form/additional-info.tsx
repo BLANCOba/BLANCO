@@ -7,51 +7,59 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from '@
 import {Textarea} from '@/components/ui/textarea';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from '@/components/ui/select';
 import {Button} from '@/components/ui/button';
+import {useTranslations} from "use-intl";
 
-const formSchema = z.object({
-    referralSource: z.string().min(1, 'Please select how you heard about us'),
-    projectBudget: z.string().min(1, 'Please select a budget range'),
-    previousEfforts: z.string().optional(),
-    additionalInfo: z.string().optional(),
-});
+const useFormSchema = () => {
+    return z.object({
+        referralSource: z.string().optional(),
+        projectBudget: z.string().optional(),
+        previousEfforts: z.string().optional(),
+        additionalInfo: z.string().optional(),
+    });
+};
+
+export type AdditionalInfoSchema = z.infer<ReturnType<typeof useFormSchema>>;
 
 interface AdditionalInfoProps {
-    onSubmit: (data: z.infer<typeof formSchema>) => void; // ✅ Add onSubmit prop
+    onSubmit: (data: AdditionalInfoSchema) => void; // ✅ Add onSubmit prop
     onBack: () => void; // ✅ Navigation back
-    initialData?: Partial<z.infer<typeof formSchema>>; // ✅ Pre-filled data
+    initialData?: Partial<AdditionalInfoSchema>; // ✅ Pre-filled data
 }
 
 export function AdditionalInfo({onSubmit, onBack, initialData}: AdditionalInfoProps) {
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
+    const t = useTranslations('contactForm');
+
+    const form = useForm<AdditionalInfoSchema>({
+        resolver: zodResolver(useFormSchema()),
         defaultValues: initialData || {}, // ✅ Set initial data if available
     });
 
-    function handleSubmit(values: z.infer<typeof formSchema>) {
-        onSubmit(values); // ✅ Pass the form data to the parent component
-    }
-
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
                     control={form.control}
                     name="referralSource"
                     render={({field}) => (
                         <FormItem>
-                            <FormLabel>How did you hear about us?</FormLabel>
+                            <FormLabel>{t('additionalInfo.referralSource.label')}</FormLabel>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
                                     <SelectTrigger>
-                                        <SelectValue placeholder="Select source"/>
+                                        <SelectValue placeholder={t('additionalInfo.referralSource.placeholder')}/>
                                     </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
-                                    <SelectItem value="search">Search Engine</SelectItem>
-                                    <SelectItem value="social">Social Media</SelectItem>
-                                    <SelectItem value="referral">Professional Referral</SelectItem>
-                                    <SelectItem value="event">Event/Conference</SelectItem>
-                                    <SelectItem value="other">Other</SelectItem>
+                                    <SelectItem
+                                        value="search">{t('additionalInfo.referralSource.values.search')}</SelectItem>
+                                    <SelectItem
+                                        value="social">{t('additionalInfo.referralSource.values.social')}</SelectItem>
+                                    <SelectItem
+                                        value="referral">{t('additionalInfo.referralSource.values.referral')}</SelectItem>
+                                    <SelectItem
+                                        value="event">{t('additionalInfo.referralSource.values.event')}</SelectItem>
+                                    <SelectItem
+                                        value="other">{t('additionalInfo.referralSource.values.other')}</SelectItem>
                                 </SelectContent>
                             </Select>
                             <FormMessage/>
@@ -64,19 +72,32 @@ export function AdditionalInfo({onSubmit, onBack, initialData}: AdditionalInfoPr
                     name="projectBudget"
                     render={({field}) => (
                         <FormItem>
-                            <FormLabel>Preferred Project Budget Range</FormLabel>
+                            <FormLabel>{t('additionalInfo.projectBudget.label')}</FormLabel>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
                                     <SelectTrigger>
-                                        <SelectValue placeholder="Select budget range"/>
+                                        <SelectValue placeholder={t('additionalInfo.projectBudget.placeholder')}/>
                                     </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
-                                    <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
-                                    <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
-                                    <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
-                                    <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
-                                    <SelectItem value="100k+">$100,000+</SelectItem>
+                                    <SelectItem value="5k-10k">{t('additionalInfo.projectBudget.values.range', {
+                                        from: 5000,
+                                        to: 10000
+                                    })}</SelectItem>
+                                    <SelectItem value="10k-25k">{t('additionalInfo.projectBudget.values.range', {
+                                        from: 10000,
+                                        to: 25000
+                                    })}</SelectItem>
+                                    <SelectItem value="25k-50k">{t('additionalInfo.projectBudget.values.range', {
+                                        from: 25000,
+                                        to: 50000
+                                    })}</SelectItem>
+                                    <SelectItem value="50k-100k">{t('additionalInfo.projectBudget.values.range', {
+                                        from: 50000,
+                                        to: 100000
+                                    })}</SelectItem>
+                                    <SelectItem
+                                        value="100k+">{t('additionalInfo.projectBudget.values.moreThan', {amount: 100000})}</SelectItem>
                                 </SelectContent>
                             </Select>
                             <FormMessage/>
@@ -89,10 +110,10 @@ export function AdditionalInfo({onSubmit, onBack, initialData}: AdditionalInfoPr
                     name="previousEfforts"
                     render={({field}) => (
                         <FormItem>
-                            <FormLabel>Previous Branding/Marketing Efforts</FormLabel>
+                            <FormLabel>{t('additionalInfo.previousEfforts.label')}</FormLabel>
                             <FormControl>
                                 <Textarea
-                                    placeholder="Describe any previous branding or marketing initiatives..."
+                                    placeholder={t('additionalInfo.previousEfforts.placeholder')}
                                     className="min-h-[80px]"
                                     {...field}
                                 />
@@ -107,10 +128,10 @@ export function AdditionalInfo({onSubmit, onBack, initialData}: AdditionalInfoPr
                     name="additionalInfo"
                     render={({field}) => (
                         <FormItem>
-                            <FormLabel>Additional Information</FormLabel>
+                            <FormLabel>{t('additionalInfo.additionalInfo.label')}</FormLabel>
                             <FormControl>
                                 <Textarea
-                                    placeholder="Any other details you'd like to share..."
+                                    placeholder={t('additionalInfo.additionalInfo.placeholder')}
                                     className="min-h-[80px]"
                                     {...field}
                                 />
@@ -122,10 +143,10 @@ export function AdditionalInfo({onSubmit, onBack, initialData}: AdditionalInfoPr
 
                 <div className="flex gap-4">
                     <Button type="button" variant="outline" onClick={onBack} className="flex-1">
-                        Previous
+                        {t('actions.previous')}
                     </Button>
                     <Button type="submit" className="flex-1">
-                        Submit
+                        {t('actions.submit')}
                     </Button>
                 </div>
             </form>

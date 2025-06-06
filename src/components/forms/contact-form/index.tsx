@@ -2,38 +2,32 @@
 
 import {useEffect, useState} from 'react';
 import {motion} from 'framer-motion';
-import {CompanyDetails} from './company-details';
-import {ContactPerson} from './contact-person';
-import {BusinessChallenges} from './business-challenges';
-import {ProjectGoals} from './project-goals';
-import {AdditionalInfo} from './additional-info';
+import {CompanyDetails, CompanyDetailsSchema} from './company-details';
+import {ContactPerson, ContactPersonSchema} from './contact-person';
+import {BusinessChallenges, BusinessChallengesSchema} from './business-challenges';
+import {ProjectGoals, ProjectGoalsSchema} from './project-goals';
+import {AdditionalInfo, AdditionalInfoSchema} from './additional-info';
 import {Steps} from './steps';
 import {useLocalStorage} from '@/hooks/use-local-storage';
+import {useTranslations} from "use-intl";
 
-// ✅ Update FormData type to support "step1", "step2", "step3", etc.
 type FormData = {
-    [key: `step${number}`]: any; // Dynamic key format
+    companyDetails?: CompanyDetailsSchema;
+    contactPerson?: ContactPersonSchema;
+    businessChallenges?: BusinessChallengesSchema;
+    projectGoals?: ProjectGoalsSchema;
+    additionalInfo?: AdditionalInfoSchema;
 };
 
 export function ContactForm() {
+    const t = useTranslations('contactForm');
     const [step, setStep] = useState(1);
     const totalSteps = 5;
     const [formData, setFormData] = useLocalStorage<FormData>('contact-form-data', {});
 
-    // ✅ Save form data for each step
-    const saveStepData = (stepNumber: number, data: any) => {
-        setFormData(prev => ({
-            ...prev,
-            [`step${stepNumber}`]: data
-        }));
-    };
-
     // ✅ Handle step navigation
     const nextStep = () => setStep((prev) => Math.min(prev + 1, totalSteps));
     const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
-
-    // ✅ Load saved data when returning to a step
-    const getStepData = (stepNumber: number) => formData[`step${stepNumber}`]; // No TypeScript error now
 
     // Handle browser back button
     useEffect(() => {
@@ -49,7 +43,7 @@ export function ContactForm() {
 
     return (
         <div className="w-full max-w-4xl mx-auto bg-card rounded-lg shadow-lg p-6 md:p-8">
-            <Steps currentStep={step} totalSteps={totalSteps}/>
+            <Steps currentStep={step} totalSteps={totalSteps} setStep={setStep}/>
 
             <motion.div
                 key={step}
@@ -61,72 +55,72 @@ export function ContactForm() {
                 {step === 1 && (
                     <CompanyDetails
                         onNext={(data) => {
-                            saveStepData(1, data);
+                            setFormData(prevState => ({...prevState, companyDetails: data}));
                             nextStep();
                         }}
-                        initialData={getStepData(1)}
+                        initialData={formData.companyDetails}
                     />
                 )}
                 {step === 2 && (
                     <ContactPerson
                         onNext={(data) => {
-                            saveStepData(2, data);
+                            setFormData(prevState => ({...prevState, contactPerson: data}));
                             nextStep();
                         }}
                         onBack={prevStep}
-                        initialData={getStepData(2)}
+                        initialData={formData.contactPerson}
                     />
                 )}
                 {step === 3 && (
                     <BusinessChallenges
                         onNext={(data) => {
-                            saveStepData(3, data);
+                            setFormData(prevState => ({...prevState, businessChallenges: data}));
                             nextStep();
                         }}
                         onBack={prevStep}
-                        initialData={getStepData(3)}
+                        initialData={formData.businessChallenges}
                     />
                 )}
                 {step === 4 && (
                     <ProjectGoals
                         onNext={(data) => {
-                            saveStepData(4, data);
+                            setFormData(prevState => ({...prevState, projectGoals: data}));
                             nextStep();
                         }}
                         onBack={prevStep}
-                        initialData={getStepData(4)}
+                        initialData={formData.projectGoals}
                     />
                 )}
                 {step === 5 && (
                     <AdditionalInfo
                         onSubmit={(data) => {
-                            saveStepData(5, data);
-                            const completeFormData = {
-                                ...formData,
-                                step5: data
-                            };
-                            console.log('Complete form data:', completeFormData);
+                            let finalData: FormData;
+                            setFormData(prevState => {
+                                finalData = {...prevState, additionalInfo: data};
+                                return finalData;
+                            });
                         }}
                         onBack={prevStep}
-                        initialData={getStepData(5)}
+                        initialData={formData.additionalInfo}
                     />
                 )}
             </motion.div>
 
             <div className="mt-8 space-y-4">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <span className="font-medium">Required fields:</span>
+                    <span className="font-medium">{t('note.requiredFields')}</span>
                     <span className="text-destructive">*</span>
                 </div>
 
-                <span className="text-sm text-muted-foreground">
-          Your data is protected under our Privacy Policy.
-        </span>
-                {step < totalSteps && (
-                    <span className="text-sm text-muted-foreground">
-             Your progress is automatically saved. You can return to complete the form later.
-          </span>
-                )}
+                <div>
+                    <span className="text-sm text-muted-foreground">{t('note.privacy')}</span>
+                    {step < totalSteps && (
+                        <>
+                            <br/>
+                            <span className="text-sm text-muted-foreground">{t('note.progress')}</span>
+                        </>
+                    )}
+                </div>
             </div>
         </div>
     );
