@@ -3,6 +3,7 @@
 import {motion} from 'framer-motion';
 import Image from "next/image";
 import logo from "@/../public/blancomedia_logo_white.png";
+import {Link} from "@/i18n/navigation";
 
 export function Logo() {
     return (
@@ -12,11 +13,13 @@ export function Logo() {
             transition={{duration: 0.5}}
             className="shrink-0"
         >
-            <Image
-                src={logo}
-                alt="Blanco"
-                className="h-8 w-auto"
-            />
+            <Link href="/">
+                <Image
+                    src={logo}
+                    alt="Blanco"
+                    className="h-8 w-auto"
+                />
+            </Link>
         </motion.div>
     );
 }
