@@ -9,10 +9,10 @@ import {Menu, X} from 'lucide-react';
 import {cn} from '@/lib/utils';
 import {useTranslations} from "use-intl";
 
+const menuItems = ['about', 'services', 'locations', 'contact'] as const;
 
 export function Header() {
     const t = useTranslations('header');
-    const menuItems = t.raw('menuItems') as string[];
     const [isOpen, setIsOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
     const {scrollY} = useScroll();
@@ -47,17 +47,17 @@ export function Header() {
                         {menuItems.map((item) => (
                             <a
                                 key={item}
-                                href={`#${item.toLowerCase()}`}
+                                href={`#${item}`}
                                 className="text-sm font-medium text-white/80 hover:text-white transition-colors"
                             >
-                                {item}
+                                {t(`menuItems.${item}`)}
                             </a>
                         ))}
 
                         <div className="flex items-center space-x-2">
                             <LanguagePicker/>
                             <Button variant="outline" size="sm">
-                                {t('getInTouch')}
+                                <a href="#contact">{t('getInTouch')}</a>
                             </Button>
                         </div>
                     </nav>
@@ -89,7 +89,7 @@ export function Header() {
                                 </a>
                             ))}
                             <Button variant="outline" size="sm" className="w-full mt-4">
-                                {t('getInTouch')}
+                                <a href="#contact">{t('getInTouch')}</a>
                             </Button>
                         </div>
                     </div>

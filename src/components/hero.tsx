@@ -66,7 +66,7 @@ export function Hero() {
     );
 
     return (
-        <section className="relative min-h-screen flex flex-col justify-end portrait:justify-center overflow-hidden">
+        <section id="about" className="relative min-h-screen flex flex-col justify-end portrait:justify-center overflow-hidden">
             <div
                 className="absolute inset-0 z-0"
                 style={{
