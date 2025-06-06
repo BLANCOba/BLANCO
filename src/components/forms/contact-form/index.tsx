@@ -10,6 +10,7 @@ import {AdditionalInfo, AdditionalInfoSchema} from './additional-info';
 import {Steps} from './steps';
 import {useLocalStorage} from '@/hooks/use-local-storage';
 import {useTranslations} from "use-intl";
+import emailjs from '@emailjs/browser';
 
 type FormData = {
     companyDetails?: CompanyDetailsSchema;
@@ -93,12 +94,13 @@ export function ContactForm() {
                 )}
                 {step === 5 && (
                     <AdditionalInfo
-                        onSubmit={(data) => {
-                            let finalData: FormData;
+                        onSubmit={async (data) => {
+                            let finalData: FormData | undefined = undefined;
                             setFormData(prevState => {
                                 finalData = {...prevState, additionalInfo: data};
                                 return finalData;
                             });
+                            await emailjs.send('blancoba.com', 'contact', finalData, {publicKey: 'nARP6RzXWmKFzSiiH'})
                         }}
                         onBack={prevStep}
                         initialData={formData.additionalInfo}
