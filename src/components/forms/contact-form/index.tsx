@@ -11,6 +11,7 @@ import {Steps} from './steps';
 import {useLocalStorage} from '@/hooks/use-local-storage';
 import {useTranslations} from "use-intl";
 import emailjs from '@emailjs/browser';
+import {toast} from "sonner";
 
 type FormData = {
     companyDetails?: CompanyDetailsSchema;
@@ -25,6 +26,7 @@ export function ContactForm() {
     const [step, setStep] = useState(1);
     const totalSteps = 5;
     const [formData, setFormData] = useLocalStorage<FormData>('contact-form-data', {});
+    const [submitting, setSubmitting] = useState(false);
 
     // ✅ Handle step navigation
     const nextStep = () => setStep((prev) => Math.min(prev + 1, totalSteps));
@@ -41,6 +43,26 @@ export function ContactForm() {
         window.addEventListener('popstate', handlePopState);
         return () => window.removeEventListener('popstate', handlePopState);
     }, [step]);
+
+    async function onSubmit(data: AdditionalInfoSchema) {
+        setSubmitting(true);
+        let finalData: FormData | undefined = undefined;
+        setFormData(prevState => {
+            finalData = {...prevState, additionalInfo: data};
+            return finalData;
+        });
+        try {
+            await emailjs.send('blancoba.com', 'contact', finalData, {publicKey: 'nARP6RzXWmKFzSiiH'});
+            setStep(1);
+            setFormData({});
+            toast.success(t('messages.success.title'), {description: t('messages.success.description')});
+        } catch (e) {
+            console.error('Email sending failed:', e);
+            toast.error(t('messages.error.title'), {description: t('messages.error.description')});
+        } finally {
+            setSubmitting(false);
+        }
+    }
 
     return (
         <div className="w-full max-w-4xl mx-auto bg-card rounded-lg shadow-lg p-6 md:p-8">
@@ -94,16 +116,10 @@ export function ContactForm() {
                 )}
                 {step === 5 && (
                     <AdditionalInfo
-                        onSubmit={async (data) => {
-                            let finalData: FormData | undefined = undefined;
-                            setFormData(prevState => {
-                                finalData = {...prevState, additionalInfo: data};
-                                return finalData;
-                            });
-                            await emailjs.send('blancoba.com', 'contact', finalData, {publicKey: 'nARP6RzXWmKFzSiiH'})
-                        }}
+                        onSubmit={onSubmit}
                         onBack={prevStep}
                         initialData={formData.additionalInfo}
+                        submitting={submitting}
                     />
                 )}
             </motion.div>

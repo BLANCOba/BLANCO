@@ -4091,6 +4091,7 @@ __metadata:
     react-hook-form: "npm:^7.57.0"
     react-phone-number-input: "npm:^3.4.12"
     react-resizable-panels: "npm:^3.0.2"
+    sonner: "npm:^2.0.5"
     tailwind-merge: "npm:^3.3.0"
     tailwindcss: "npm:^4"
     tw-animate-css: "npm:^1.2.9"
@@ -4800,6 +4801,16 @@ __metadata:
   dependencies:
     is-arrayish: "npm:^0.3.1"
   checksum: 10c0/df5e4662a8c750bdba69af4e8263c5d96fe4cd0f9fe4bdfa3cbdeb45d2e869dff640beaaeb1ef0e99db4d8d2ec92f85508c269f50c972174851bc1ae5bd64308
+  languageName: node
+  linkType: hard
+
+"sonner@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "sonner@npm:2.0.5"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    react-dom: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 10c0/38ec98e2f5d7e086825307f737a90bdc8639182d184e002719c2368bf3a9259c340f41afda731716d2b78c40e5e3aa9165058375be42f6a93bda0876b9b433ba
   languageName: node
   linkType: hard
 

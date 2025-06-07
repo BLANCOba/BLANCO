@@ -10,6 +10,7 @@ import {ThemeProvider} from "next-themes";
 import {setRequestLocale} from "next-intl/server";
 import {Metadata} from "next";
 import React, {ReactNode} from "react";
+import {Toaster} from "@/components/ui/sonner";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -60,6 +61,7 @@ export default async function LocaleLayout({
                     {children}
                     <CookieConsent/>
                     <PolicyContent/>
+                    <Toaster richColors/>
                 </NextIntlClientProvider>
             </ThemeProvider>
             </body>

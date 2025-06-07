@@ -156,6 +156,16 @@
       "previous": "Previous step",
       "submit": "Submit"
     },
+    "messages": {
+      "success": {
+        "title": "Thank you for your submission!",
+        "description": "We will get back to you within 24 hours."
+      },
+      "error": {
+        "title": "Error",
+        "description": "There was an error submitting the form. Please try again later."
+      }
+    },
     "note": {
       "requiredFields": "Required fields:",
       "privacy": "Your data is protected under our Privacy Policy.",

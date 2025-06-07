@@ -8,6 +8,7 @@ import {Textarea} from '@/components/ui/textarea';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from '@/components/ui/select';
 import {Button} from '@/components/ui/button';
 import {useTranslations} from "use-intl";
+import {LoadingButton} from "@/components/ui/loading-button";
 
 const useFormSchema = () => {
     return z.object({
@@ -24,9 +25,10 @@ interface AdditionalInfoProps {
     onSubmit: (data: AdditionalInfoSchema) => void; // ✅ Add onSubmit prop
     onBack: () => void; // ✅ Navigation back
     initialData?: Partial<AdditionalInfoSchema>; // ✅ Pre-filled data
+    submitting: boolean; // ✅ Optional submitting state
 }
 
-export function AdditionalInfo({onSubmit, onBack, initialData}: AdditionalInfoProps) {
+export function AdditionalInfo({onSubmit, onBack, initialData, submitting}: AdditionalInfoProps) {
     const t = useTranslations('contactForm');
 
     const form = useForm<AdditionalInfoSchema>({
@@ -145,9 +147,9 @@ export function AdditionalInfo({onSubmit, onBack, initialData}: AdditionalInfoPr
                     <Button type="button" variant="outline" onClick={onBack} className="flex-1">
                         {t('actions.previous')}
                     </Button>
-                    <Button type="submit" className="flex-1">
+                    <LoadingButton loading={submitting} type="submit" className="flex-1">
                         {t('actions.submit')}
-                    </Button>
+                    </LoadingButton>
                 </div>
             </form>
         </Form>
