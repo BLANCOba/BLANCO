@@ -235,6 +235,7 @@
       "phone": {
         "label": "Phone Number",
         "placeholder": "Enter your phone number",
+        "required": "Please enter your phone number",
         "invalid": "Invalid phone number"
       },
       "preferredContact": {

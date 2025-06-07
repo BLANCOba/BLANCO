@@ -1,324 +1,325 @@
 {
   "header": {
     "language": {
-      "select": "Select Language"
+      "select": "เลือกภาษา"
     },
-    "getInTouch": "Get in Touch",
+    "getInTouch": "ติดต่อกลับ",
     "menuItems": {
-      "about": "About",
-      "services": "Services",
-      "locations": "Locations",
-      "contact": "Contact"
+      "about": "เกี่ยวกับ",
+      "services": "บริการ",
+      "locations": "สถานที่",
+      "contact": "ติดต่อ"
     }
   },
   "footer": {
     "copyright": "© {year} Blanco Business Associates. All rights reserved.",
     "legalSection": {
       "legalNotice": {
-        "title": "Legal Notice"
+        "title": "ประกาศทางกฎหมาย"
       },
       "documents": {
-        "title": "Legal Documents",
-        "disclaimer": "Disclaimer",
-        "privacy": "Privacy Policy",
-        "terms": "Terms of Service"
+        "title": "เอกสารทางกฎหมาย",
+        "disclaimer": "คำเตือน",
+        "privacy": "นโยบายความเป็นส่วนตัว",
+        "terms": "ข้อกำหนด"
       },
       "contact": {
-        "title": "Contact Information",
-        "email": "Email:",
-        "phone": "Phone:"
+        "title": "ข้อมูลติดต่อ",
+        "email": "อีเมล:",
+        "phone": "โทรศัพท์:"
       },
       "compliance": {
-        "title": "Compliance",
-        "description": "We adhere to GDPR, CCPA, and other applicable data protection regulations. For more information, please review our Privacy Policy."
+        "title": "การปฏิบัติตาม",
+        "description": "เราปฏิบัติตาม GDPR, CCPA และข้อบังคับคุ้มครองข้อมูลอื่นๆ ที่เกี่ยวข้อง สำหรับข้อมูลเพิ่มเติม โปรดอ่านนโยบายความเป็นส่วนตัวของเรา"
       }
     }
   },
   "contact": {
-    "title": "Let's Work Together",
-    "description": "Ready to transform your brand? Fill out the form below or email us directly at <email></email>. Our team will get back to you within 24 hours."
+    "title": "มาทำงานร่วมกัน",
+    "description": "พร้อมที่จะเปลี่ยนแปลงแบรนด์ของคุณหรือยัง กรอกแบบฟอร์มด้านล่างหรือส่งอีเมลถึงเราโดยตรงที่ <email></email> ทีมงานของเราจะติดต่อกลับภายใน 24 ชั่วโมง"
   },
   "cookies": {
-    "content": "We use cookies to enhance your experience. By continuing, you agree to our <privacyPolicy>Privacy Policy</privacyPolicy>.",
-    "acceptButton": "Got It"
+    "content": "เราใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ โดยการดำเนินการต่อ แสดงว่าคุณยอมรับ<privacyPolicy>นโยบายความเป็นส่วนตัว</privacyPolicy>ของเรา",
+    "acceptButton": "เข้าใจแล้ว"
   },
   "hero": {
-    "title": "Innovating Brands Across Borders.",
-    "subtitle": "Empowering businesses worldwide with multilingual expertise and culturally-tailored solutions.",
-    "ctaButton": "Let's Build Your Global Brand",
+    "title": "สร้างสรรค์แบรนด์ข้ามพรมแดน",
+    "subtitle": "การเพิ่มขีดความสามารถให้กับธุรกิจทั่วโลกด้วยความเชี่ยวชาญหลายภาษาและโซลูชั่นที่ได้รับการออกแบบทางวัฒนธรรม",
+    "ctaButton": "มาสร้างแบรนด์ระดับโลกของคุณกันเถอะ",
     "trustSection": {
-      "heading": "15+ Years of Trusted Partnerships Worldwide.",
-      "subtitle": "Helping brands grow and thrive in markets around the world."
+      "heading": "15 ปีของการเป็นหุ้นส่วนที่เชื่อถือได้ทั่วโลก",
+      "subtitle": "ช่วยให้แบรนด์เติบโตและเจริญเติบโตในตลาดทั่วโลก"
     },
     "buttons": {
-      "seeMore": "See More",
-      "seeLess": "See Less"
+      "seeMore": "ดูเพิ่มเติม",
+      "seeLess": "เห็นน้อยลง"
     }
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Comprehensive branding and marketing solutions delivered by our multilingual team across four continents",
+    "title": "บริการของเรา",
+    "subtitle": "โซลูชั่นการสร้างแบรนด์และการตลาดที่ครอบคลุมซึ่งจัดทำโดยทีมงานหลายภาษาของเราในสี่ทวีป",
     "branding": {
-      "title": "Brand Strategy",
-      "description": "Helping brands establish their identity and stand out in competitive markets. ",
+      "title": "กลยุทธ์แบรนด์",
+      "description": "การช่วยให้แบรนด์สร้างตัวตนของพวกเขาและโดดเด่นในตลาดการแข่งขัน",
       "features": [
-        "Brand Audit",
-        "Brand Identity Development",
-        "Brand Positioning",
-        "Brand Guidelines"
+        "การตรวจสอบแบรนด์",
+        "การพัฒนาเอกลักษณ์ของแบรนด์",
+        "การวางตำแหน่งแบรนด์",
+        "แนวทางของแบรนด์"
       ]
     },
     "marketing": {
-      "title": "Marketing Strategy",
-      "description": "Creating data-driven strategies to connect with target audiences and drive growth.",
+      "title": "กลยุทธ์การตลาด",
+      "description": "การสร้างกลยุทธ์ที่ขับเคลื่อนด้วยข้อมูลเพื่อเชื่อมต่อกับกลุ่มเป้าหมายและผลักดันการเติบโต",
       "features": [
-        "Competitor Analysis",
-        "Market Research",
-        "Digital Marketing Campaigns",
-        "SEO Optimization"
+        "การวิเคราะห์คู่แข่ง",
+        "การวิจัยตลาด",
+        "แคมเปญการตลาดดิจิทัล",
+        "การเพิ่มประสิทธิภาพ SEO"
       ]
     },
     "creative": {
-      "title": "Creative Strategy",
-      "description": "Transforming ideas into compelling campaigns that resonate across channels.",
+      "title": "กลยุทธ์เชิงสร้างสรรค์",
+      "description": "การเปลี่ยนแนวคิดให้กลายเป็นแคมเปญที่น่าสนใจซึ่งสะท้อนข้ามช่องทาง",
       "features": [
-        "Campaign Concept Development",
-        "Content Strategy",
-        "Storytelling",
-        "Creative Direction"
+        "การพัฒนาแนวคิดแคมเปญ",
+        "กลยุทธ์เนื้อหา",
+        "การเล่าเรื่อง",
+        "ทิศทางที่สร้างสรรค์"
       ]
     },
     "communication": {
-      "title": "Visual Communication",
-      "description": "Delivering designs that elevate brand presence and ensure clear messaging.",
+      "title": "การสื่อสารด้วยภาพ",
+      "description": "ส่งมอบการออกแบบที่ยกระดับการมีอยู่ของแบรนด์และสร้างความมั่นใจในการส่งข้อความที่ชัดเจน",
       "features": [
-        "Logo Design",
-        "Branded Collaterals",
-        "UI/UX Design",
-        "Print Design"
+        "การออกแบบโลโก้",
+        "หลักประกันตรา",
+        "การออกแบบ UI/UX",
+        "การออกแบบการพิมพ์"
       ]
     },
     "technical": {
-      "title": "Technical Services",
-      "description": "Empowering businesses with robust digital solutions and seamless technology integration.",
+      "title": "บริการด้านเทคนิค",
+      "description": "เพิ่มขีดความสามารถให้กับธุรกิจด้วยโซลูชั่นดิจิทัลที่แข็งแกร่งและการรวมเทคโนโลยีที่ไร้รอยต่อ",
       "features": [
-        "Web Development",
-        "Analytics Integration",
-        "IT Support",
-        "App Development"
+        "การพัฒนาเว็บ",
+        "การรวมการวิเคราะห์",
+        "สนับสนุนด้านไอที",
+        "การพัฒนาแอพ"
       ]
     },
     "content": {
-      "title": "Content Creation",
-      "description": "Producing engaging content to amplify your brand’s voice and reach.",
+      "title": "การสร้างเนื้อหา",
+      "description": "การผลิตเนื้อหาที่น่าสนใจเพื่อขยายเสียงและการเข้าถึงของแบรนด์ของคุณ",
       "features": [
-        "Copywriting",
-        "Translation",
-        "Social Media",
-        "Video Production"
+        "การเขียนคำโฆษณา",
+        "การแปล",
+        "โซเชียลมีเดีย",
+        "การผลิตวิดีโอ"
       ]
     }
   },
   "locations": {
-    "title": "Global Presence",
-    "subtitle": "Strategic locations across four continents",
+    "title": "การปรากฏตัวทั่วโลก",
+    "subtitle": "สถานที่เชิงกลยุทธ์ในสี่ทวีป",
     "cities": {
       "tokyo": {
-        "city": "Tokyo",
-        "country": "Japan",
-        "description": "Innovative hub bridging Eastern traditions with Western advancements"
+        "city": "โตเกียว",
+        "country": "ประเทศญี่ปุ่น",
+        "description": "นวัตกรรมฮับเชื่อมโยงประเพณีตะวันออกที่มีความก้าวหน้าแบบตะวันตก"
       },
       "berlin": {
-        "city": "Berlin",
-        "country": "Germany",
-        "description": "Vibrant melting pot of art, technology, and forward-thinking business"
+        "city": "กรุงเบอร์ลิน",
+        "country": "ประเทศเยอรมนี",
+        "description": "ธุรกิจศิลปะเทคโนโลยีและธุรกิจการคิดล่วงหน้า"
       },
       "barcelona": {
-        "city": "Barcelona",
-        "country": "Spain",
-        "description": "Mediterranean nexus of creativity, culture, and cutting-edge innovation"
+        "city": "บาร์เซโลนา",
+        "country": "สเปน",
+        "description": "เน็กซัสเมดิเตอร์เรเนียนแห่งความคิดสร้างสรรค์วัฒนธรรมและนวัตกรรมที่ทันสมัย"
       },
       "montevideo": {
-        "city": "Montevideo",
-        "country": "Uruguay",
-        "description": "Emerging tech center and gateway to Latin American markets"
+        "city": "มอนเตวิเดโอ",
+        "country": "อุรุกวัย",
+        "description": "ศูนย์เทคโนโลยีที่เกิดขึ้นใหม่และประตูสู่ตลาดละตินอเมริกา"
       },
       "bangkok": {
-        "city": "Bangkok",
-        "country": "Thailand",
-        "description": "Dynamic crossroads of Southeast Asian commerce and digital transformation"
+        "city": "กรุงเทพฯ",
+        "country": "ประเทศไทย",
+        "description": "ทางแยกแบบไดนามิกของการค้าในเอเชียตะวันออกเฉียงใต้และการเปลี่ยนแปลงทางดิจิตอล"
       }
     }
   },
   "contactForm": {
     "actions": {
-      "next": "Next step",
-      "previous": "Previous step",
-      "submit": "Submit"
+      "next": "ขั้นตอนต่อไป",
+      "previous": "ขั้นตอนก่อนหน้า",
+      "submit": "ส่ง"
     },
     "messages": {
       "success": {
-        "title": "Thank you for your submission!",
-        "description": "We will get back to you within 24 hours."
+        "title": "ขอบคุณสำหรับการส่งของคุณ!",
+        "description": "เราจะติดต่อกลับภายใน 24 ชั่วโมง"
       },
       "error": {
-        "title": "Error",
-        "description": "There was an error submitting the form. Please try again later."
+        "title": "ข้อผิดพลาด",
+        "description": "มีข้อผิดพลาดในการส่งแบบฟอร์ม"
       }
     },
     "note": {
-      "requiredFields": "Required fields:",
-      "privacy": "Your data is protected under our Privacy Policy.",
-      "progress": "Your progress is automatically saved. You can return to complete the form later."
+      "requiredFields": "ฟิลด์ที่จำเป็น:",
+      "privacy": "ข้อมูลของคุณได้รับการคุ้มครองภายใต้นโยบายความเป็นส่วนตัวของเรา",
+      "progress": "ความคืบหน้าของคุณจะถูกบันทึกโดยอัตโนมัติ คุณสามารถกลับมากรอกแบบฟอร์มได้ในภายหลัง"
     },
     "companyDetails": {
-      "description": "Tell us about your company. This information will help us tailor our services and recommendations to your needs.",
+      "description": "แจ้งให้เราทราบเกี่ยวกับบริษัทของคุณ ข้อมูลนี้จะช่วยให้เราปรับแต่งบริการและคำแนะนำให้เหมาะกับความต้องการของคุณ",
       "companyName": {
-        "label": "Company Name",
-        "placeholder": "Enter your company name",
-        "required": "Please enter a company name"
+        "label": "ชื่อ บริษัท",
+        "placeholder": "ป้อนชื่อ บริษัท ของคุณ",
+        "required": "กรุณากรอกชื่อ บริษัท"
       },
       "industry": {
-        "label": "Industry",
-        "placeholder": "Select industry",
+        "label": "อุตสาหกรรม",
+        "placeholder": "เลือกอุตสาหกรรม",
         "values": {
-          "technology": "Technology",
-          "retail": "Retail",
-          "healthcare": "Healthcare",
-          "finance": "Finance",
-          "manufacturing": "Manufacturing",
-          "other": "Other"
+          "technology": "เทคโนโลยี",
+          "retail": "ขายปลีก",
+          "healthcare": "การดูแลสุขภาพ",
+          "finance": "การเงิน",
+          "manufacturing": "การผลิต",
+          "other": "อื่น"
         }
       },
       "yearsInBusiness": {
-        "label": "Years in Business",
-        "placeholder": "Select years",
+        "label": "ปีในธุรกิจ",
+        "placeholder": "เลือกปี",
         "values": {
-          "lessThan": "Less than {years, plural, =1 {# year} other {# years}}",
-          "range": "{from, number}-{to, number} years",
-          "moreThan": "{years, number}+ years"
+          "lessThan": "น้อยกว่า {years, number} ปี",
+          "range": "{from, number}-{to, number} ปี",
+          "moreThan": "{years, number}+ ปี"
         }
       },
       "companySize": {
-        "label": "Company Size",
-        "placeholder": "Select size",
+        "label": "ขนาด บริษัท",
+        "placeholder": "เลือกขนาด",
         "values": {
-          "range": "{from, number}-{to, number} employees",
-          "moreThan": "{employees, number}+ employees"
+          "range": "{from, number}-{to, number} พนักงาน",
+          "moreThan": "{employees, number}+ พนักงาน"
         }
       },
       "revenue": {
-        "label": "Annual Revenue Range",
-        "placeholder": "Select range"
+        "label": "ช่วงรายได้ต่อปี",
+        "placeholder": "เลือกช่วง"
       },
       "website": {
-        "label": "Website"
+        "label": "เว็บไซต์"
       }
     },
     "contactPerson": {
-      "description": "Tell us about your contact person.",
+      "description": "บอกเราเกี่ยวกับบุคคลที่ติดต่อของคุณ",
       "fullName": {
-        "label": "Full Name",
-        "placeholder": "Enter your full name",
-        "required": "Full name must be at least 2 characters"
+        "label": "ชื่อเต็ม",
+        "placeholder": "ป้อนชื่อเต็มของคุณ",
+        "required": "ชื่อเต็มต้องมีอย่างน้อย 2 อักขระ"
       },
       "position": {
-        "label": "Position/Role",
-        "placeholder": "Enter your position"
+        "label": "ตำแหน่ง/บทบาท",
+        "placeholder": "เข้าสู่ตำแหน่งของคุณ"
       },
       "email": {
-        "label": "Email Address",
-        "placeholder": "Enter your email",
-        "required": "Please enter your email",
-        "invalid": "Invalid email address"
+        "label": "ที่อยู่อีเมล",
+        "placeholder": "ป้อนอีเมลของคุณ",
+        "required": "กรุณากรอกอีเมลของคุณ",
+        "invalid": "ที่อยู่อีเมลไม่ถูกต้อง"
       },
       "phone": {
-        "label": "Phone Number",
-        "placeholder": "Enter your phone number",
-        "invalid": "Invalid phone number"
+        "label": "หมายเลขโทรศัพท์",
+        "placeholder": "ป้อนหมายเลขโทรศัพท์ของคุณ",
+        "required": "กรุณากรอกหมายเลขโทรศัพท์ของคุณ",
+        "invalid": "หมายเลขโทรศัพท์ที่ไม่ถูกต้อง"
       },
       "preferredContact": {
-        "label": "Preferred Contact Method",
-        "placeholder": "Select contact method",
+        "label": "วิธีการติดต่อที่ต้องการ",
+        "placeholder": "เลือกวิธีการติดต่อ",
         "values": {
-          "email": "Email",
-          "phone": "Phone",
-          "both": "Both"
+          "email": "อีเมล",
+          "phone": "โทรศัพท์",
+          "both": "ทั้งคู่"
         }
       }
     },
     "businessChallenges": {
       "painPoints": {
-        "label": "Current Marketing/Branding Challenges",
-        "placeholder": "Describe your main marketing and branding challenges...",
-        "invalid": "Please describe your challenges in more detail"
+        "label": "ความท้าทายด้านการตลาด/การสร้างแบรนด์ในปัจจุบัน",
+        "placeholder": "อธิบายความท้าทายด้านการตลาดและการสร้างแบรนด์หลักของคุณ...",
+        "invalid": "โปรดอธิบายความท้าทายของคุณในรายละเอียดเพิ่มเติม"
       },
       "competitors": {
-        "label": "Main Competitors",
-        "placeholder": "List your main competitors..."
+        "label": "คู่แข่งหลัก",
+        "placeholder": "แสดงรายการคู่แข่งหลักของคุณ..."
       },
       "targetAudience": {
-        "label": "Target Audience",
-        "placeholder": "Describe your target audience...",
-        "invalid": "Please describe your target audience in more detail"
+        "label": "กลุ่มเป้าหมาย",
+        "placeholder": "อธิบายกลุ่มเป้าหมายของคุณ...",
+        "invalid": "โปรดอธิบายรายละเอียดของกลุ่มเป้าหมายของคุณในรายละเอียดเพิ่มเติม"
       },
       "budget": {
-        "label": "Marketing Budget Range",
-        "placeholder": "Select budget range",
+        "label": "ช่วงงบประมาณการตลาด",
+        "placeholder": "เลือกช่วงงบประมาณ",
         "values": {
-          "lessThan": "Less than {amount, number, currency}",
+          "lessThan": "น้อยกว่า {amount, number, currency}",
           "range": "{from, number, currency}-{to, number, currency}",
           "moreThan": "{amount, number, currency}+"
         }
       },
       "timeline": {
-        "label": "Desired Timeline",
-        "placeholder": "Select timeline",
+        "label": "ไทม์ไลน์ที่ต้องการ",
+        "placeholder": "เลือกไทม์ไลน์",
         "values": {
-          "within": "Within {months, number} months",
-          "flexible": "Flexible"
+          "within": "ภายใน {months, number} เดือน",
+          "flexible": "ยืดหยุ่นได้"
         }
       }
     },
     "projectGoals": {
       "objectives": {
-        "label": "Project Objectives",
-        "placeholder": "What are your main objectives for this project?",
-        "invalid": "Please describe your project objectives in more detail"
+        "label": "วัตถุประสงค์ของโครงการ",
+        "placeholder": "วัตถุประสงค์หลักของคุณสำหรับโครงการนี้คืออะไร?",
+        "invalid": "โปรดอธิบายวัตถุประสงค์โครงการของคุณโดยละเอียดเพิ่มเติม"
       },
       "keyResults": {
-        "label": "Key Results",
-        "placeholder": "What results do you want to achieve with this project?",
-        "invalid": "Please specify key results you aim to achieve in more detail"
+        "label": "ผลลัพธ์ที่สำคัญ",
+        "placeholder": "คุณต้องการผลลัพธ์อะไรกับโครงการนี้?",
+        "invalid": "โปรดระบุผลลัพธ์ที่สำคัญที่คุณตั้งเป้าหมายที่จะบรรลุรายละเอียดเพิ่มเติม"
       }
     },
     "additionalInfo": {
       "referralSource": {
-        "label": "How did you hear about us?",
-        "placeholder": "Select source",
+        "label": "คุณได้ยินเกี่ยวกับเราได้อย่างไร?",
+        "placeholder": "เลือกแหล่งที่มา",
         "values": {
-          "search": "Search Engine",
-          "social": "Social Media",
-          "referral": "Professional Referral",
-          "event": "Event/Conference",
-          "other": "Other"
+          "search": "เครื่องมือค้นหา",
+          "social": "โซเชียลมีเดีย",
+          "referral": "การอ้างอิงอย่างมืออาชีพ",
+          "event": "กิจกรรม/การประชุม",
+          "other": "อื่น"
         }
       },
       "projectBudget": {
-        "label": "Preferred Project Budget Range",
-        "placeholder": "Select budget range",
+        "label": "ช่วงงบประมาณโครงการที่ต้องการ",
+        "placeholder": "เลือกช่วงงบประมาณ",
         "values": {
           "range": "{from, number, currency}-{to, number, currency}",
           "moreThan": "{amount, number, currency}+"
         }
       },
       "previousEfforts": {
-        "label": "Previous Branding/Marketing Efforts",
-        "placeholder": "Describe any previous branding or marketing initiatives..."
+        "label": "ความพยายามในการสร้างแบรนด์/การตลาดก่อนหน้านี้",
+        "placeholder": "อธิบายถึงการสร้างแบรนด์หรือโครงการทางการตลาดก่อนหน้านี้..."
       },
       "additionalInfo": {
-        "label": "Additional Information",
-        "placeholder": "Any other details you'd like to share..."
+        "label": "ข้อมูลเพิ่มเติม",
+        "placeholder": "รายละเอียดอื่น ๆ ที่คุณต้องการแบ่งปัน..."
       }
     }
   }

@@ -1,14 +1,14 @@
 {
   "header": {
     "language": {
-      "select": "Select Language"
+      "select": "言語を選択します"
     },
-    "getInTouch": "Get in Touch",
+    "getInTouch": "連絡する",
     "menuItems": {
-      "about": "About",
-      "services": "Services",
-      "locations": "Locations",
-      "contact": "Contact"
+      "about": "弊社について",
+      "services": "サービス",
+      "locations": "場所",
+      "contact": "接触"
     }
   },
   "footer": {
@@ -18,307 +18,308 @@
         "title": "Legal Notice"
       },
       "documents": {
-        "title": "Legal Documents",
-        "disclaimer": "Disclaimer",
-        "privacy": "Privacy Policy",
-        "terms": "Terms of Service"
+        "title": "法的文書",
+        "disclaimer": "免責事項",
+        "privacy": "プライバシーポリシー",
+        "terms": "利用規約"
       },
       "contact": {
-        "title": "Contact Information",
-        "email": "Email:",
-        "phone": "Phone:"
+        "title": "連絡先",
+        "email": "メール：",
+        "phone": "電話："
       },
       "compliance": {
-        "title": "Compliance",
-        "description": "We adhere to GDPR, CCPA, and other applicable data protection regulations. For more information, please review our Privacy Policy."
+        "title": "コンプライアンス",
+        "description": "GDPR、CCPA、およびその他の該当するデータ保護規則を遵守します。詳細については、当社のプライバシーポリシーをご覧ください。"
       }
     }
   },
   "contact": {
-    "title": "Let's Work Together",
-    "description": "Ready to transform your brand? Fill out the form below or email us directly at <email></email>. Our team will get back to you within 24 hours."
+    "title": "一緒に働きましょう",
+    "description": "ブランドを変革する準備はできましたか？ 下記のフォームにご記入いただくか、<email></email>まで直接メールでお問い合わせください。担当チームが24時間以内にご返信いたします。"
   },
   "cookies": {
-    "content": "We use cookies to enhance your experience. By continuing, you agree to our <privacyPolicy>Privacy Policy</privacyPolicy>.",
-    "acceptButton": "Got It"
+    "content": "お客様の利便性向上のため、Cookieを使用しています。続行すると、<privacyPolicy>プライバシーポリシー</privacyPolicy>に同意したことになります。",
+    "acceptButton": "承知"
   },
   "hero": {
-    "title": "Innovating Brands Across Borders.",
-    "subtitle": "Empowering businesses worldwide with multilingual expertise and culturally-tailored solutions.",
-    "ctaButton": "Let's Build Your Global Brand",
+    "title": "国境を越えてブランドを革新します。",
+    "subtitle": "世界中の多言語の専門知識と文化的に調整されたソリューションを提供しています。",
+    "ctaButton": "グローバルブランドを構築しましょう",
     "trustSection": {
-      "heading": "15+ Years of Trusted Partnerships Worldwide.",
-      "subtitle": "Helping brands grow and thrive in markets around the world."
+      "heading": "世界中の15年以上の信頼できるパートナーシップ。",
+      "subtitle": "ブランドが世界中の市場で成長し、繁栄するのを支援します。"
     },
     "buttons": {
-      "seeMore": "See More",
-      "seeLess": "See Less"
+      "seeMore": "更に表示",
+      "seeLess": "隠す"
     }
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Comprehensive branding and marketing solutions delivered by our multilingual team across four continents",
+    "title": "私たちのサービス",
+    "subtitle": "4つの大陸で多言語チームが提供する包括的なブランディングおよびマーケティングソリューション",
     "branding": {
-      "title": "Brand Strategy",
-      "description": "Helping brands establish their identity and stand out in competitive markets. ",
+      "title": "ブランド戦略",
+      "description": "ブランドがアイデンティティを確立し、競争の激しい市場で際立っているのを支援します。",
       "features": [
-        "Brand Audit",
-        "Brand Identity Development",
-        "Brand Positioning",
-        "Brand Guidelines"
+        "ブランド監査",
+        "ブランドアイデンティティ開発",
+        "ブランドポジショニング",
+        "ブランドガイドライン"
       ]
     },
     "marketing": {
-      "title": "Marketing Strategy",
-      "description": "Creating data-driven strategies to connect with target audiences and drive growth.",
+      "title": "マーケティング戦略",
+      "description": "ターゲットオーディエンスとつながり、成長を促進するためのデータ駆動型戦略を作成します。",
       "features": [
-        "Competitor Analysis",
-        "Market Research",
-        "Digital Marketing Campaigns",
-        "SEO Optimization"
+        "競合他社の分析",
+        "市場調査",
+        "デジタルマーケティングキャンペーン",
+        "SEOの最適化"
       ]
     },
     "creative": {
-      "title": "Creative Strategy",
-      "description": "Transforming ideas into compelling campaigns that resonate across channels.",
+      "title": "創造的な戦略",
+      "description": "アイデアをチャネル全体に共鳴する魅力的なキャンペーンに変換します。",
       "features": [
-        "Campaign Concept Development",
-        "Content Strategy",
-        "Storytelling",
-        "Creative Direction"
+        "キャンペーンの概念開発",
+        "コンテンツ戦略",
+        "ストーリーテリング",
+        "クリエイティブディレクション"
       ]
     },
     "communication": {
-      "title": "Visual Communication",
-      "description": "Delivering designs that elevate brand presence and ensure clear messaging.",
+      "title": "視覚的なコミュニケーション",
+      "description": "ブランドの存在感を高め、明確なメッセージングを確保するデザインを提供します。",
       "features": [
-        "Logo Design",
-        "Branded Collaterals",
-        "UI/UX Design",
-        "Print Design"
+        "ロゴデザイン",
+        "ブランドの担保",
+        "UI/UXデザイン",
+        "印刷デザイン"
       ]
     },
     "technical": {
-      "title": "Technical Services",
-      "description": "Empowering businesses with robust digital solutions and seamless technology integration.",
+      "title": "技術サービス",
+      "description": "堅牢なデジタルソリューションとシームレスなテクノロジー統合を備えた企業に力を与えます。",
       "features": [
-        "Web Development",
-        "Analytics Integration",
-        "IT Support",
-        "App Development"
+        "Web開発",
+        "分析統合",
+        "ITサポート",
+        "アプリ開発"
       ]
     },
     "content": {
-      "title": "Content Creation",
-      "description": "Producing engaging content to amplify your brand’s voice and reach.",
+      "title": "コンテンツ作成",
+      "description": "ブランドの声とリーチを増幅するための魅力的なコンテンツを作成します。",
       "features": [
-        "Copywriting",
-        "Translation",
-        "Social Media",
-        "Video Production"
+        "コピーライティング",
+        "翻訳",
+        "ソーシャルメディア",
+        "ビデオ制作"
       ]
     }
   },
   "locations": {
-    "title": "Global Presence",
-    "subtitle": "Strategic locations across four continents",
+    "title": "グローバルな存在",
+    "subtitle": "4つの大陸にわたる戦略的な場所",
     "cities": {
       "tokyo": {
-        "city": "Tokyo",
-        "country": "Japan",
-        "description": "Innovative hub bridging Eastern traditions with Western advancements"
+        "city": "東京",
+        "country": "日本",
+        "description": "東洋の伝統を西洋の進歩に橋渡しする革新的なハブ"
       },
       "berlin": {
-        "city": "Berlin",
-        "country": "Germany",
-        "description": "Vibrant melting pot of art, technology, and forward-thinking business"
+        "city": "ベルリン",
+        "country": "ドイツ",
+        "description": "芸術、テクノロジー、先進的なビジネスの活気に満ちたるつぼ"
       },
       "barcelona": {
-        "city": "Barcelona",
-        "country": "Spain",
-        "description": "Mediterranean nexus of creativity, culture, and cutting-edge innovation"
+        "city": "バルセロナ",
+        "country": "スペイン",
+        "description": "創造性、文化、最先端の革新の地中海の結びつき"
       },
       "montevideo": {
-        "city": "Montevideo",
-        "country": "Uruguay",
-        "description": "Emerging tech center and gateway to Latin American markets"
+        "city": "モンテビデオ",
+        "country": "ウルグアイ",
+        "description": "新興技術センターとラテンアメリカ市場へのゲートウェイ"
       },
       "bangkok": {
-        "city": "Bangkok",
-        "country": "Thailand",
-        "description": "Dynamic crossroads of Southeast Asian commerce and digital transformation"
+        "city": "バンコク",
+        "country": "タイ",
+        "description": "東南アジアの商業とデジタル変革のダイナミックな岐路"
       }
     }
   },
   "contactForm": {
     "actions": {
-      "next": "Next step",
-      "previous": "Previous step",
-      "submit": "Submit"
+      "next": "次のステップ",
+      "previous": "前のステップ",
+      "submit": "送信する"
     },
     "messages": {
       "success": {
-        "title": "Thank you for your submission!",
-        "description": "We will get back to you within 24 hours."
+        "title": "送信していただきありがとうございます！",
+        "description": "24時間以内にご連絡いたします。"
       },
       "error": {
-        "title": "Error",
-        "description": "There was an error submitting the form. Please try again later."
+        "title": "エラー",
+        "description": "フォームの送信にエラーがありました。"
       }
     },
     "note": {
-      "requiredFields": "Required fields:",
-      "privacy": "Your data is protected under our Privacy Policy.",
-      "progress": "Your progress is automatically saved. You can return to complete the form later."
+      "requiredFields": "必須フィールド：",
+      "privacy": "あなたのデータは当社のプライバシーポリシーの下で保護されています。",
+      "progress": "進捗状況は自動的に保存されます。後でフォームに戻って入力できます。"
     },
     "companyDetails": {
-      "description": "Tell us about your company. This information will help us tailor our services and recommendations to your needs.",
+      "description": "貴社についてお聞かせください。この情報は、お客様のニーズに合わせたサービスやご提案を提供するために役立ちます。",
       "companyName": {
-        "label": "Company Name",
-        "placeholder": "Enter your company name",
-        "required": "Please enter a company name"
+        "label": "会社名",
+        "placeholder": "会社名を入力してください",
+        "required": "会社名を入力してください"
       },
       "industry": {
-        "label": "Industry",
-        "placeholder": "Select industry",
+        "label": "業界",
+        "placeholder": "業界を選択します",
         "values": {
-          "technology": "Technology",
-          "retail": "Retail",
-          "healthcare": "Healthcare",
-          "finance": "Finance",
-          "manufacturing": "Manufacturing",
-          "other": "Other"
+          "technology": "技術",
+          "retail": "小売り",
+          "healthcare": "健康",
+          "finance": "金融",
+          "manufacturing": "製造",
+          "other": "その他"
         }
       },
       "yearsInBusiness": {
-        "label": "Years in Business",
-        "placeholder": "Select years",
+        "label": "創業年数",
+        "placeholder": "年数を選択します",
         "values": {
-          "lessThan": "Less than {years, plural, =1 {# year} other {# years}}",
-          "range": "{from, number}-{to, number} years",
-          "moreThan": "{years, number}+ years"
+          "lessThan": "{years, number}年未満",
+          "range": "{from, number}-{to, number}年",
+          "moreThan": "{years, number}年以上"
         }
       },
       "companySize": {
-        "label": "Company Size",
-        "placeholder": "Select size",
+        "label": "会社の規模",
+        "placeholder": "サイズを選択します",
         "values": {
-          "range": "{from, number}-{to, number} employees",
-          "moreThan": "{employees, number}+ employees"
+          "range": "{from, number}-{to, number}人",
+          "moreThan": "{employees, number}人以上"
         }
       },
       "revenue": {
-        "label": "Annual Revenue Range",
-        "placeholder": "Select range"
+        "label": "年間収益範囲",
+        "placeholder": "範囲を選択します"
       },
       "website": {
-        "label": "Website"
+        "label": "Webサイト"
       }
     },
     "contactPerson": {
-      "description": "Tell us about your contact person.",
+      "description": "連絡先について教えてください。",
       "fullName": {
-        "label": "Full Name",
-        "placeholder": "Enter your full name",
-        "required": "Full name must be at least 2 characters"
+        "label": "氏名",
+        "placeholder": "氏名を入力してください",
+        "required": "氏名は少なくとも2文字でなければなりません"
       },
       "position": {
-        "label": "Position/Role",
-        "placeholder": "Enter your position"
+        "label": "地位/役割",
+        "placeholder": "地位を入力してください"
       },
       "email": {
-        "label": "Email Address",
-        "placeholder": "Enter your email",
-        "required": "Please enter your email",
-        "invalid": "Invalid email address"
+        "label": "メールアドレス",
+        "placeholder": "メールを入力してください",
+        "required": "メールを入力してください",
+        "invalid": "無効なメールアドレス"
       },
       "phone": {
-        "label": "Phone Number",
-        "placeholder": "Enter your phone number",
-        "invalid": "Invalid phone number"
+        "label": "電話番号",
+        "placeholder": "電話番号を入力してください",
+        "required": "電話番号を入力してください",
+        "invalid": "無効な電話番号"
       },
       "preferredContact": {
-        "label": "Preferred Contact Method",
-        "placeholder": "Select contact method",
+        "label": "優先連絡方法",
+        "placeholder": "連絡先方法を選択します",
         "values": {
-          "email": "Email",
-          "phone": "Phone",
-          "both": "Both"
+          "email": "メール",
+          "phone": "電話",
+          "both": "両方"
         }
       }
     },
     "businessChallenges": {
       "painPoints": {
-        "label": "Current Marketing/Branding Challenges",
-        "placeholder": "Describe your main marketing and branding challenges...",
-        "invalid": "Please describe your challenges in more detail"
+        "label": "現在のマーケティング/ブランディングの課題",
+        "placeholder": "主なマーケティングとブランディングの課題を説明してください...",
+        "invalid": "課題をもっと詳しく説明してください"
       },
       "competitors": {
-        "label": "Main Competitors",
-        "placeholder": "List your main competitors..."
+        "label": "主な競合他社",
+        "placeholder": "主な競合他社を教えてください..."
       },
       "targetAudience": {
-        "label": "Target Audience",
-        "placeholder": "Describe your target audience...",
-        "invalid": "Please describe your target audience in more detail"
+        "label": " 対象顧客層 ",
+        "placeholder": " 対象顧客層 を説明してください...",
+        "invalid": " 対象顧客層をもっと詳しく説明してください"
       },
       "budget": {
-        "label": "Marketing Budget Range",
-        "placeholder": "Select budget range",
+        "label": "マーケティング予算範囲",
+        "placeholder": "予算範囲を選択します",
         "values": {
-          "lessThan": "Less than {amount, number, currency}",
+          "lessThan": "{amount, number, currency}未満",
           "range": "{from, number, currency}-{to, number, currency}",
-          "moreThan": "{amount, number, currency}+"
+          "moreThan": "{amount, number, currency}以上"
         }
       },
       "timeline": {
-        "label": "Desired Timeline",
-        "placeholder": "Select timeline",
+        "label": "望ましいタイムライン",
+        "placeholder": "タイムラインを選択します",
         "values": {
-          "within": "Within {months, number} months",
-          "flexible": "Flexible"
+          "within": "{months, number}月以内",
+          "flexible": "フレキシブル"
         }
       }
     },
     "projectGoals": {
       "objectives": {
-        "label": "Project Objectives",
-        "placeholder": "What are your main objectives for this project?",
-        "invalid": "Please describe your project objectives in more detail"
+        "label": "プロジェクト目標",
+        "placeholder": "このプロジェクトの主な目的は何ですか？",
+        "invalid": "プロジェクトの目標を詳細に説明してください"
       },
       "keyResults": {
-        "label": "Key Results",
-        "placeholder": "What results do you want to achieve with this project?",
-        "invalid": "Please specify key results you aim to achieve in more detail"
+        "label": "重要な結果",
+        "placeholder": "このプロジェクトでどのような結果を達成したいですか？",
+        "invalid": "達成することを目指す重要な結果をもっと詳しく説明してください"
       }
     },
     "additionalInfo": {
       "referralSource": {
-        "label": "How did you hear about us?",
-        "placeholder": "Select source",
+        "label": "私たちのことをどこで知りましたか？",
+        "placeholder": "ソースを選択します",
         "values": {
-          "search": "Search Engine",
-          "social": "Social Media",
-          "referral": "Professional Referral",
-          "event": "Event/Conference",
-          "other": "Other"
+          "search": "検索エンジン",
+          "social": "ソーシャルメディア",
+          "referral": "専門的な紹介",
+          "event": "イベント/会議",
+          "other": "その他"
         }
       },
       "projectBudget": {
-        "label": "Preferred Project Budget Range",
-        "placeholder": "Select budget range",
+        "label": "プロジェクトの予算範囲",
+        "placeholder": "予算範囲を選択します",
         "values": {
           "range": "{from, number, currency}-{to, number, currency}",
-          "moreThan": "{amount, number, currency}+"
+          "moreThan": "{amount, number, currency}以上"
         }
       },
       "previousEfforts": {
-        "label": "Previous Branding/Marketing Efforts",
-        "placeholder": "Describe any previous branding or marketing initiatives..."
+        "label": "以前のブランディング/マーケティング活動",
+        "placeholder": "以前のブランディングまたはマーケティングのイニシアチブを説明してください..."
       },
       "additionalInfo": {
-        "label": "Additional Information",
-        "placeholder": "Any other details you'd like to share..."
+        "label": "追加情報",
+        "placeholder": "共有したいその他の情報..."
       }
     }
   }

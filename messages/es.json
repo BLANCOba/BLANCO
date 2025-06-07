@@ -1,324 +1,325 @@
 {
   "header": {
     "language": {
-      "select": "Select Language"
+      "select": "Lenguaje seleccionado"
     },
-    "getInTouch": "Get in Touch",
+    "getInTouch": "Ponerse en contacto",
     "menuItems": {
-      "about": "About",
-      "services": "Services",
-      "locations": "Locations",
-      "contact": "Contact"
+      "about": "Acerca de",
+      "services": "Servicios",
+      "locations": "Ubicación",
+      "contact": "Contacto"
     }
   },
   "footer": {
     "copyright": "© {year} Blanco Business Associates. All rights reserved.",
     "legalSection": {
       "legalNotice": {
-        "title": "Legal Notice"
+        "title": "Aviso legal"
       },
       "documents": {
-        "title": "Legal Documents",
-        "disclaimer": "Disclaimer",
-        "privacy": "Privacy Policy",
-        "terms": "Terms of Service"
+        "title": "Documentos legales",
+        "disclaimer": "Descargo de responsabilidad",
+        "privacy": "política de privacidad",
+        "terms": "Términos de servicio"
       },
       "contact": {
-        "title": "Contact Information",
-        "email": "Email:",
-        "phone": "Phone:"
+        "title": "Información del contacto",
+        "email": "Correo electrónico:",
+        "phone": "Teléfono:"
       },
       "compliance": {
-        "title": "Compliance",
-        "description": "We adhere to GDPR, CCPA, and other applicable data protection regulations. For more information, please review our Privacy Policy."
+        "title": "Cumplimiento",
+        "description": "Nos adherimos a GDPR, CCPA y otras regulaciones de protección de datos aplicables. Para obtener más información, revise nuestra Política de privacidad."
       }
     }
   },
   "contact": {
-    "title": "Let's Work Together",
-    "description": "Ready to transform your brand? Fill out the form below or email us directly at <email></email>. Our team will get back to you within 24 hours."
+    "title": "Trabajemos juntos",
+    "description": "¿Listo para transformar tu marca? Completa el formulario a continuación o escríbenos directamente a <email></email>. Nuestro equipo te responderá en 24 horas."
   },
   "cookies": {
-    "content": "We use cookies to enhance your experience. By continuing, you agree to our <privacyPolicy>Privacy Policy</privacyPolicy>.",
-    "acceptButton": "Got It"
+    "content": "Utilizamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra <privacyPolicy>Política de Privacidad</privacyPolicy>.",
+    "acceptButton": "Entiendo"
   },
   "hero": {
-    "title": "Innovating Brands Across Borders.",
-    "subtitle": "Empowering businesses worldwide with multilingual expertise and culturally-tailored solutions.",
-    "ctaButton": "Let's Build Your Global Brand",
+    "title": "Innovando marcas a través de las fronteras.",
+    "subtitle": "Empoderar a las empresas en todo el mundo con experiencia multilingüe y soluciones de colocación cultural.",
+    "ctaButton": "Construyamos su marca global",
     "trustSection": {
-      "heading": "15+ Years of Trusted Partnerships Worldwide.",
-      "subtitle": "Helping brands grow and thrive in markets around the world."
+      "heading": "Más de 15 años de asociaciones de confianza en todo el mundo.",
+      "subtitle": "Ayudar a las marcas a crecer y prosperar en mercados de todo el mundo."
     },
     "buttons": {
-      "seeMore": "See More",
-      "seeLess": "See Less"
+      "seeMore": "Ver más",
+      "seeLess": "Ver menos"
     }
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Comprehensive branding and marketing solutions delivered by our multilingual team across four continents",
+    "title": "Nuestros servicios",
+    "subtitle": "Soluciones integrales de marca y marketing entregadas por nuestro equipo multilingüe en cuatro continentes",
     "branding": {
-      "title": "Brand Strategy",
-      "description": "Helping brands establish their identity and stand out in competitive markets. ",
+      "title": "Estrategia de marca",
+      "description": "Ayudando a las marcas a establecer su identidad y a destacarse en los mercados competitivos.",
       "features": [
-        "Brand Audit",
-        "Brand Identity Development",
-        "Brand Positioning",
-        "Brand Guidelines"
+        "Auditoría de marca",
+        "Desarrollo de identidad de marca",
+        "Posicionamiento de la marca",
+        "Pautas de marca"
       ]
     },
     "marketing": {
-      "title": "Marketing Strategy",
-      "description": "Creating data-driven strategies to connect with target audiences and drive growth.",
+      "title": "Estrategia de comercialización",
+      "description": "Creación de estrategias basadas en datos para conectarse con el público objetivo y impulsar el crecimiento.",
       "features": [
-        "Competitor Analysis",
-        "Market Research",
-        "Digital Marketing Campaigns",
-        "SEO Optimization"
+        "Análisis de la competencia",
+        "Investigación de mercado",
+        "Campañas de marketing digital",
+        "Optimización de SEO"
       ]
     },
     "creative": {
-      "title": "Creative Strategy",
-      "description": "Transforming ideas into compelling campaigns that resonate across channels.",
+      "title": "Estrategia creativa",
+      "description": "Transformar ideas en campañas convincentes que resuenan a través de los canales.",
       "features": [
-        "Campaign Concept Development",
-        "Content Strategy",
-        "Storytelling",
-        "Creative Direction"
+        "Desarrollo del concepto de campaña",
+        "Estrategia de contenido",
+        "Narración de cuentos",
+        "Dirección creativa"
       ]
     },
     "communication": {
-      "title": "Visual Communication",
-      "description": "Delivering designs that elevate brand presence and ensure clear messaging.",
+      "title": "Comunicación visual",
+      "description": "Entregando diseños que elevan la presencia de la marca y garantizan mensajes claros.",
       "features": [
-        "Logo Design",
-        "Branded Collaterals",
-        "UI/UX Design",
-        "Print Design"
+        "Diseño de logotipo",
+        "Colaterales de marca",
+        "Diseño de UI/UX",
+        "Diseño de impresión"
       ]
     },
     "technical": {
-      "title": "Technical Services",
-      "description": "Empowering businesses with robust digital solutions and seamless technology integration.",
+      "title": "Servicios técnicos",
+      "description": "Empoderar a las empresas con soluciones digitales robustas e integración de tecnología perfecta.",
       "features": [
-        "Web Development",
-        "Analytics Integration",
-        "IT Support",
-        "App Development"
+        "Desarrollo web",
+        "Integración de análisis",
+        "Es compatible",
+        "Desarrollo de aplicaciones"
       ]
     },
     "content": {
-      "title": "Content Creation",
-      "description": "Producing engaging content to amplify your brand’s voice and reach.",
+      "title": "Creación de contenido",
+      "description": "Producir contenido atractivo para amplificar la voz y el alcance de su marca.",
       "features": [
-        "Copywriting",
-        "Translation",
-        "Social Media",
-        "Video Production"
+        "Redacción",
+        "Traducción",
+        "Redes sociales",
+        "Producción de video"
       ]
     }
   },
   "locations": {
-    "title": "Global Presence",
-    "subtitle": "Strategic locations across four continents",
+    "title": "Presencia global",
+    "subtitle": "Ubicaciones estratégicas en cuatro continentes",
     "cities": {
       "tokyo": {
-        "city": "Tokyo",
-        "country": "Japan",
-        "description": "Innovative hub bridging Eastern traditions with Western advancements"
+        "city": "Tokio",
+        "country": "Japón",
+        "description": "Hub innovador puente las tradiciones orientales con avances occidentales"
       },
       "berlin": {
-        "city": "Berlin",
-        "country": "Germany",
-        "description": "Vibrant melting pot of art, technology, and forward-thinking business"
+        "city": "Berlina",
+        "country": "Alemania",
+        "description": "Crisol vibrante de arte, tecnología y negocio a futuro"
       },
       "barcelona": {
         "city": "Barcelona",
-        "country": "Spain",
-        "description": "Mediterranean nexus of creativity, culture, and cutting-edge innovation"
+        "country": "España",
+        "description": "Nexo mediterráneo de creatividad, cultura e innovación de vanguardia"
       },
       "montevideo": {
         "city": "Montevideo",
         "country": "Uruguay",
-        "description": "Emerging tech center and gateway to Latin American markets"
+        "description": "Centro de tecnología emergente y puerta de enlace a los mercados latinoamericanos"
       },
       "bangkok": {
         "city": "Bangkok",
-        "country": "Thailand",
-        "description": "Dynamic crossroads of Southeast Asian commerce and digital transformation"
+        "country": "Tailandia",
+        "description": "Encrucijada dinámica del comercio y transformación digital del sudeste asiático"
       }
     }
   },
   "contactForm": {
     "actions": {
-      "next": "Next step",
-      "previous": "Previous step",
-      "submit": "Submit"
+      "next": "Siguiente paso",
+      "previous": "Paso anterior",
+      "submit": "Entregar"
     },
     "messages": {
       "success": {
-        "title": "Thank you for your submission!",
-        "description": "We will get back to you within 24 hours."
+        "title": "¡Gracias por su presentación!",
+        "description": "Nos pondremos en contacto con usted dentro de las 24 horas."
       },
       "error": {
         "title": "Error",
-        "description": "There was an error submitting the form. Please try again later."
+        "description": "Hubo un error que envió el formulario."
       }
     },
     "note": {
-      "requiredFields": "Required fields:",
-      "privacy": "Your data is protected under our Privacy Policy.",
-      "progress": "Your progress is automatically saved. You can return to complete the form later."
+      "requiredFields": "Campos requeridos:",
+      "privacy": "Sus datos están protegidos bajo nuestra Política de privacidad.",
+      "progress": "Tu progreso se guarda automáticamente. Puedes volver a completar el formulario más tarde."
     },
     "companyDetails": {
-      "description": "Tell us about your company. This information will help us tailor our services and recommendations to your needs.",
+      "description": "Cuéntenos sobre su empresa. Esta información nos ayudará a adaptar nuestros servicios y recomendaciones a sus necesidades.",
       "companyName": {
-        "label": "Company Name",
-        "placeholder": "Enter your company name",
-        "required": "Please enter a company name"
+        "label": "nombre de empresa",
+        "placeholder": "Ingrese el nombre de su empresa",
+        "required": "Ingrese el nombre de una empresa"
       },
       "industry": {
-        "label": "Industry",
-        "placeholder": "Select industry",
+        "label": "Industria",
+        "placeholder": "Industria seleccionada",
         "values": {
-          "technology": "Technology",
-          "retail": "Retail",
-          "healthcare": "Healthcare",
-          "finance": "Finance",
-          "manufacturing": "Manufacturing",
-          "other": "Other"
+          "technology": "Tecnología",
+          "retail": "Minorista",
+          "healthcare": "Cuidado de la salud",
+          "finance": "Finanzas",
+          "manufacturing": "Fabricación",
+          "other": "Otro"
         }
       },
       "yearsInBusiness": {
-        "label": "Years in Business",
-        "placeholder": "Select years",
+        "label": "Años en los negocios",
+        "placeholder": "Años seleccionados",
         "values": {
-          "lessThan": "Less than {years, plural, =1 {# year} other {# years}}",
-          "range": "{from, number}-{to, number} years",
-          "moreThan": "{years, number}+ years"
+          "lessThan": "Menos de {years, plural, =1 {# año} other {# años}}",
+          "range": "{from, number}-{to, number} años",
+          "moreThan": "{years, number}+ años"
         }
       },
       "companySize": {
-        "label": "Company Size",
-        "placeholder": "Select size",
+        "label": "Tamaño de la empresa",
+        "placeholder": "Tamaño de selección",
         "values": {
-          "range": "{from, number}-{to, number} employees",
-          "moreThan": "{employees, number}+ employees"
+          "range": "{from, number}-{to, number} empleados",
+          "moreThan": "{employees, number}+ empleados"
         }
       },
       "revenue": {
-        "label": "Annual Revenue Range",
-        "placeholder": "Select range"
+        "label": "Rango de ingresos anual",
+        "placeholder": "Rango de selección"
       },
       "website": {
-        "label": "Website"
+        "label": "Sitio web"
       }
     },
     "contactPerson": {
-      "description": "Tell us about your contact person.",
+      "description": "Cuéntanos sobre tu persona de contacto.",
       "fullName": {
-        "label": "Full Name",
-        "placeholder": "Enter your full name",
-        "required": "Full name must be at least 2 characters"
+        "label": "Nombre completo",
+        "placeholder": "Ingrese su nombre completo",
+        "required": "El nombre completo debe ser al menos 2 caracteres"
       },
       "position": {
-        "label": "Position/Role",
-        "placeholder": "Enter your position"
+        "label": "Posición/papel",
+        "placeholder": "Ingrese su posición"
       },
       "email": {
-        "label": "Email Address",
-        "placeholder": "Enter your email",
-        "required": "Please enter your email",
-        "invalid": "Invalid email address"
+        "label": "Dirección de correo electrónico",
+        "placeholder": "Ingrese su correo electrónico",
+        "required": "Por favor ingrese su correo electrónico",
+        "invalid": "Dirección de correo electrónico no válida"
       },
       "phone": {
-        "label": "Phone Number",
-        "placeholder": "Enter your phone number",
-        "invalid": "Invalid phone number"
+        "label": "Número de teléfono",
+        "placeholder": "Ingrese su número de teléfono",
+        "required": "Por favor ingrese su número de teléfono",
+        "invalid": "Número de teléfono no válido"
       },
       "preferredContact": {
-        "label": "Preferred Contact Method",
-        "placeholder": "Select contact method",
+        "label": "Método de contacto preferido",
+        "placeholder": "Seleccione el método de contacto",
         "values": {
-          "email": "Email",
-          "phone": "Phone",
-          "both": "Both"
+          "email": "Correo electrónico",
+          "phone": "Teléfono",
+          "both": "Ambos"
         }
       }
     },
     "businessChallenges": {
       "painPoints": {
-        "label": "Current Marketing/Branding Challenges",
-        "placeholder": "Describe your main marketing and branding challenges...",
-        "invalid": "Please describe your challenges in more detail"
+        "label": "Desafíos actuales de marketing/marca",
+        "placeholder": "Describa sus principales desafíos de marketing y marca...",
+        "invalid": "Describa sus desafíos con más detalle"
       },
       "competitors": {
-        "label": "Main Competitors",
-        "placeholder": "List your main competitors..."
+        "label": "Principales competidores",
+        "placeholder": "Enumere a sus principales competidores..."
       },
       "targetAudience": {
-        "label": "Target Audience",
-        "placeholder": "Describe your target audience...",
-        "invalid": "Please describe your target audience in more detail"
+        "label": "Público objetivo",
+        "placeholder": "Describe tu público objetivo...",
+        "invalid": "Describa su público objetivo con más detalle"
       },
       "budget": {
-        "label": "Marketing Budget Range",
-        "placeholder": "Select budget range",
+        "label": "Rango de presupuesto de marketing",
+        "placeholder": "Rango de presupuesto seleccionado",
         "values": {
-          "lessThan": "Less than {amount, number, currency}",
+          "lessThan": "Menos de {amount, number, currency}",
           "range": "{from, number, currency}-{to, number, currency}",
           "moreThan": "{amount, number, currency}+"
         }
       },
       "timeline": {
-        "label": "Desired Timeline",
-        "placeholder": "Select timeline",
+        "label": "Línea de tiempo deseada",
+        "placeholder": "Seleccionar línea de tiempo",
         "values": {
-          "within": "Within {months, number} months",
+          "within": "Dentro de {months, number} meses",
           "flexible": "Flexible"
         }
       }
     },
     "projectGoals": {
       "objectives": {
-        "label": "Project Objectives",
-        "placeholder": "What are your main objectives for this project?",
-        "invalid": "Please describe your project objectives in more detail"
+        "label": "Objetivos del proyecto",
+        "placeholder": "¿Cuáles son sus objetivos principales para este proyecto?",
+        "invalid": "Describa los objetivos de su proyecto con más detalle"
       },
       "keyResults": {
-        "label": "Key Results",
-        "placeholder": "What results do you want to achieve with this project?",
-        "invalid": "Please specify key results you aim to achieve in more detail"
+        "label": "Resultados clave",
+        "placeholder": "¿Qué resultados desea lograr con este proyecto?",
+        "invalid": "Especifique los resultados clave que tiene como objetivo lograr con más detalle"
       }
     },
     "additionalInfo": {
       "referralSource": {
-        "label": "How did you hear about us?",
-        "placeholder": "Select source",
+        "label": "¿Cómo se enteró de nosotros?",
+        "placeholder": "Seleccionar fuente",
         "values": {
-          "search": "Search Engine",
-          "social": "Social Media",
-          "referral": "Professional Referral",
-          "event": "Event/Conference",
-          "other": "Other"
+          "search": "Motor de búsqueda",
+          "social": "Redes sociales",
+          "referral": "Referencia profesional",
+          "event": "Evento/conferencia",
+          "other": "Otro"
         }
       },
       "projectBudget": {
-        "label": "Preferred Project Budget Range",
-        "placeholder": "Select budget range",
+        "label": "Rango de presupuesto del proyecto preferido",
+        "placeholder": "Rango de presupuesto seleccionado",
         "values": {
           "range": "{from, number, currency}-{to, number, currency}",
           "moreThan": "{amount, number, currency}+"
         }
       },
       "previousEfforts": {
-        "label": "Previous Branding/Marketing Efforts",
-        "placeholder": "Describe any previous branding or marketing initiatives..."
+        "label": "Esfuerzos de marca/marketing anteriores",
+        "placeholder": "Describa cualquier iniciativa de marca o marketing anterior..."
       },
       "additionalInfo": {
-        "label": "Additional Information",
-        "placeholder": "Any other details you'd like to share..."
+        "label": "información adicional",
+        "placeholder": "Cualquier otro detalle que desee compartir..."
       }
     }
   }
