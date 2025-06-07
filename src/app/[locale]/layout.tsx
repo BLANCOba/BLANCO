@@ -61,7 +61,7 @@ export default async function LocaleLayout({
                     {children}
                     <CookieConsent/>
                     <PolicyContent/>
-                    <Toaster richColors/>
+                    <Toaster richColors duration={5000}/>
                 </NextIntlClientProvider>
             </ThemeProvider>
             </body>
