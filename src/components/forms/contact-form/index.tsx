@@ -44,25 +44,30 @@ export function ContactForm() {
         return () => window.removeEventListener('popstate', handlePopState);
     }, [step]);
 
-    async function onSubmit(data: AdditionalInfoSchema) {
-        setSubmitting(true);
-        let finalData: FormData | undefined = undefined;
-        setFormData(prevState => {
-            finalData = {...prevState, additionalInfo: data};
-            return finalData;
-        });
-        try {
-            await emailjs.send('blancoba.com', 'contact', finalData, {publicKey: 'nARP6RzXWmKFzSiiH'});
-            setStep(1);
-            setFormData({});
-            toast.success(t('messages.success.title'), {description: t('messages.success.description')});
-        } catch (e) {
-            console.error('Email sending failed:', e);
-            toast.error(t('messages.error.title'), {description: t('messages.error.description')});
-        } finally {
-            setSubmitting(false);
+    useEffect(() => {
+        const sendEmail = async () => {
+            try {
+                await emailjs.send('blancoba.com', 'contact', formData, {publicKey: 'nARP6RzXWmKFzSiiH'});
+                setStep(1);
+                setFormData({});
+                toast.success(t('messages.success.title'), {description: t('messages.success.description')});
+            } catch (e) {
+                console.error('Email sending failed:', e);
+                toast.error(t('messages.error.title'), {description: t('messages.error.description')});
+            } finally {
+                setSubmitting(false);
+            }
+        };
+
+        if (submitting) {
+            sendEmail().catch(console.error);
         }
-    }
+    }, [formData, submitting, setFormData, setStep, t]);
+
+    const onSubmit = async (data: AdditionalInfoSchema) => {
+        setSubmitting(true);
+        setFormData(prevState => ({...prevState, additionalInfo: data}));
+    };
 
     return (
         <div className="w-full max-w-4xl mx-auto bg-card rounded-lg shadow-lg p-6 md:p-8">
