@@ -105,11 +105,11 @@ export function CompanyDetails({onNext, initialData}: CompanyDetailsProps) {
                         name="yearsInBusiness"
                         render={({field}) => (
                             <FormItem>
-                                <FormLabel>Years in Business</FormLabel>
+                                <FormLabel>{t('companyDetails.yearsInBusiness.label')}</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
                                         <SelectTrigger>
-                                            <SelectValue placeholder="Select years"/>
+                                            <SelectValue placeholder={t('companyDetails.yearsInBusiness.placeholder')}/>
                                         </SelectTrigger>
                                     </FormControl>
                                     <SelectContent>

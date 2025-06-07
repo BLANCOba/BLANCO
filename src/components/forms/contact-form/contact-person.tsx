@@ -18,7 +18,7 @@ const useFormSchema = () => {
         fullName: z.string().min(2, t('contactPerson.fullName.required')).max(100),
         position: z.string().optional(),
         email: z.string().min(1, t('contactPerson.email.required')).email(t('contactPerson.email.invalid')),
-        phone: z.string().refine(isValidPhoneNumber, {message: t('contactPerson.phone.invalid')}),
+        phone: z.string().min(1, t('contactPerson.phone.required')).refine(isValidPhoneNumber, {message: t('contactPerson.phone.invalid')}),
         preferredContact: z.string().optional(),
     });
 };
