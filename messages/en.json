@@ -14,6 +14,10 @@
   "footer": {
     "copyright": "© {year} Blanco Business Associates. All rights reserved.",
     "legalSection": {
+      "title": {
+        "long": "Legal Information/Site Notice",
+        "short": "Legal/Notice"
+      },
       "legalNotice": {
         "title": "Legal Notice"
       },

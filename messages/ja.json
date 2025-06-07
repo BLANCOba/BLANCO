@@ -14,8 +14,12 @@
   "footer": {
     "copyright": "© {year} Blanco Business Associates. All rights reserved.",
     "legalSection": {
+      "title": {
+        "long": "法的情報",
+        "short": "法的情報"
+      },
       "legalNotice": {
-        "title": "Legal Notice"
+        "title": "法的情報"
       },
       "documents": {
         "title": "法的文書",

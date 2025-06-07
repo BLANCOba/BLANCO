@@ -26,8 +26,8 @@ export function LegalSection() {
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-muted-foreground hover:text-foreground"
             >
-                <span className="hidden sm:inline">Legal Information/Impressum</span>
-                <span className="sm:hidden">Legal/Impressum</span>
+                <span className="hidden sm:inline">{t('legalSection.title.long')}</span>
+                <span className="sm:hidden">{t('legalSection.title.short')}</span>
                 {isOpen ? <ChevronUp className="ml-2 size-4"/> : <ChevronDown className="ml-2 size-4"/>}
             </Button>
 
