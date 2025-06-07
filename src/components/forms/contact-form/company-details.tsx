@@ -18,7 +18,11 @@ const useFormSchema = () => {
         yearsInBusiness: z.string().optional(),
         companySize: z.string().optional(),
         revenue: z.string().optional(),
-        website: z.string().regex(/^(?:https?:\/\/)?([a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/, t('companyDetails.website.invalid')).or(z.literal(''))
+        website: z.union([
+            z.literal('').optional(),
+            z.string()
+                .regex(/^(?:https?:\/\/)?([a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/)
+        ], {error: t('companyDetails.website.invalid')})
     });
 };
 
