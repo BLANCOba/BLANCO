@@ -1,13 +1,13 @@
 'use client';
 
-import {zodResolver} from '@hookform/resolvers/zod';
 import {useForm} from 'react-hook-form';
-import * as z from 'zod';
+import * as z from 'zod/v4';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from '@/components/ui/form';
 import {Textarea} from '@/components/ui/textarea';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from '@/components/ui/select';
 import {Button} from '@/components/ui/button';
 import {useTranslations} from "use-intl";
+import {standardSchemaResolver} from "@hookform/resolvers/standard-schema";
 
 const useFormSchema = () => {
     const t = useTranslations('contactForm');
@@ -32,7 +32,7 @@ export function BusinessChallenges({onNext, onBack, initialData}: BusinessChalle
     const t = useTranslations('contactForm');
 
     const form = useForm<BusinessChallengesSchema>({
-        resolver: zodResolver(useFormSchema()),
+        resolver: standardSchemaResolver(useFormSchema()),
         defaultValues: initialData || {} // ✅ Set the initial form values
     });
 

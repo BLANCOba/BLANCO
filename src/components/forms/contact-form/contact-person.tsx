@@ -1,8 +1,7 @@
 'use client';
 
-import {zodResolver} from '@hookform/resolvers/zod';
 import {useForm} from 'react-hook-form';
-import * as z from 'zod';
+import * as z from 'zod/v4';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from '@/components/ui/form';
 import {Input} from '@/components/ui/input';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from '@/components/ui/select';
@@ -10,6 +9,7 @@ import {Button} from '@/components/ui/button';
 import {useLocale, useTranslations} from "use-intl";
 import {PhoneInput} from "@/components/ui/phone-input";
 import {isValidPhoneNumber} from "react-phone-number-input";
+import {standardSchemaResolver} from "@hookform/resolvers/standard-schema";
 
 const useFormSchema = () => {
     const t = useTranslations('contactForm');
@@ -17,7 +17,7 @@ const useFormSchema = () => {
     return z.object({
         fullName: z.string().min(2, t('contactPerson.fullName.required')).max(100),
         position: z.string().optional(),
-        email: z.string().min(1, t('contactPerson.email.required')).email(t('contactPerson.email.invalid')),
+        email: z.email(t('contactPerson.email.invalid')).min(1, t('contactPerson.email.required')),
         phone: z.string().min(1, t('contactPerson.phone.required')).refine(isValidPhoneNumber, {message: t('contactPerson.phone.invalid')}),
         preferredContact: z.string().optional(),
     });
@@ -37,7 +37,7 @@ export function ContactPerson({onNext, onBack, initialData}: ContactPersonProps)
     const locale = useLocale();
 
     const form = useForm<ContactPersonSchema>({
-        resolver: zodResolver(useFormSchema()),
+        resolver: standardSchemaResolver(useFormSchema()),
         defaultValues: initialData || {
             fullName: '',
             position: '',
