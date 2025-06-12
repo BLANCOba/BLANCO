@@ -1,13 +1,13 @@
 'use client';
 
-import {zodResolver} from '@hookform/resolvers/zod';
 import {useForm} from 'react-hook-form';
-import * as z from 'zod';
+import * as z from 'zod/v4';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from '@/components/ui/form';
 import {Input} from '@/components/ui/input';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from '@/components/ui/select';
 import {Button} from '@/components/ui/button';
 import {useTranslations} from "use-intl";
+import {standardSchemaResolver} from '@hookform/resolvers/standard-schema';
 
 const useFormSchema = () => {
     const t = useTranslations('contactForm');
@@ -18,7 +18,11 @@ const useFormSchema = () => {
         yearsInBusiness: z.string().optional(),
         companySize: z.string().optional(),
         revenue: z.string().optional(),
-        website: z.string().url().optional().or(z.literal('')),
+        website: z.union([
+            z.literal('').optional(),
+            z.string()
+                .regex(/^(?:https?:\/\/)?([a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/)
+        ], {error: t('companyDetails.website.invalid')})
     });
 };
 
@@ -34,7 +38,7 @@ export function CompanyDetails({onNext, initialData}: CompanyDetailsProps) {
     const t = useTranslations('contactForm');
 
     const form = useForm<CompanyDetailsSchema>({
-        resolver: zodResolver(useFormSchema()),
+        resolver: standardSchemaResolver(useFormSchema()),
         defaultValues: initialData || {
             companyName: '',
             industry: '',
@@ -47,7 +51,7 @@ export function CompanyDetails({onNext, initialData}: CompanyDetailsProps) {
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onNext)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onNext, errors => console.log(errors))} className="space-y-6">
                 <div className="text-sm text-muted-foreground mb-6">
                     {t('companyDetails.description')}
                 </div>
@@ -199,7 +203,6 @@ export function CompanyDetails({onNext, initialData}: CompanyDetailsProps) {
                                         <SelectItem value="5m+">$5M+</SelectItem>
                                     </SelectContent>
                                 </Select>
-
                                 <FormMessage/>
                             </FormItem>
                         )}

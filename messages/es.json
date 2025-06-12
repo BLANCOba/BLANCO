@@ -216,7 +216,8 @@
         "placeholder": "Rango de selección"
       },
       "website": {
-        "label": "Sitio web"
+        "label": "Sitio web",
+        "invalid": "Por favor, introduzca una URL válida"
       }
     },
     "contactPerson": {

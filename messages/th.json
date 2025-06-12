@@ -216,7 +216,8 @@
         "placeholder": "เลือกช่วง"
       },
       "website": {
-        "label": "เว็บไซต์"
+        "label": "เว็บไซต์",
+        "invalid": "กรุณากรอก URL ที่ถูกต้อง"
       }
     },
     "contactPerson": {

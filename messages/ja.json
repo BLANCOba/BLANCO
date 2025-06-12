@@ -216,7 +216,8 @@
         "placeholder": "範囲を選択します"
       },
       "website": {
-        "label": "Webサイト"
+        "label": "Webサイト",
+        "invalid": "有効なURLを入力してください"
       }
     },
     "contactPerson": {

@@ -216,7 +216,8 @@
         "placeholder": "Spanne auswählen"
       },
       "website": {
-        "label": "Webseite"
+        "label": "Webseite",
+        "invalid": "Bitte geben Sie eine gültige URL ein"
       }
     },
     "contactPerson": {

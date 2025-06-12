@@ -216,7 +216,8 @@
         "placeholder": "Sélectionner la plage"
       },
       "website": {
-        "label": "Site web"
+        "label": "Site web",
+        "invalid": "Veuillez saisir une URL valide"
       }
     },
     "contactPerson": {

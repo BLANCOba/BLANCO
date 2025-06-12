@@ -216,7 +216,8 @@
         "placeholder": "Select range"
       },
       "website": {
-        "label": "Website"
+        "label": "Website",
+        "invalid": "Please enter a valid URL"
       }
     },
     "contactPerson": {

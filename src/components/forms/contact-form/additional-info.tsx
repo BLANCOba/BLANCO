@@ -1,14 +1,14 @@
 'use client';
 
-import {zodResolver} from '@hookform/resolvers/zod';
 import {useForm} from 'react-hook-form';
-import * as z from 'zod';
+import * as z from 'zod/v4';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from '@/components/ui/form';
 import {Textarea} from '@/components/ui/textarea';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from '@/components/ui/select';
 import {Button} from '@/components/ui/button';
 import {useTranslations} from "use-intl";
 import {LoadingButton} from "@/components/ui/loading-button";
+import {standardSchemaResolver} from "@hookform/resolvers/standard-schema";
 
 const useFormSchema = () => {
     return z.object({
@@ -32,7 +32,7 @@ export function AdditionalInfo({onSubmit, onBack, initialData, submitting}: Addi
     const t = useTranslations('contactForm');
 
     const form = useForm<AdditionalInfoSchema>({
-        resolver: zodResolver(useFormSchema()),
+        resolver: standardSchemaResolver(useFormSchema()),
         defaultValues: initialData || {}, // ✅ Set initial data if available
     });
 
