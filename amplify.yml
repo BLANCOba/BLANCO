@@ -3,12 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - corepack enable
-        - corepack prepare yarn@4.9.1 --activate
-        - yarn install --immutable
+        - node .yarn/releases/yarn-4.9.1.cjs install --immutable
     build:
       commands:
-        - yarn build
+        - node .yarn/releases/yarn-4.9.1.cjs build
   artifacts:
     baseDirectory: out
     files:
