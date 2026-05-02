@@ -1,0 +1,19 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - corepack enable
+        - corepack prepare yarn@4.9.1 --activate
+        - yarn install --immutable
+    build:
+      commands:
+        - yarn build
+  artifacts:
+    baseDirectory: out
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - .yarn/cache/**/*
+      - node_modules/**/*
