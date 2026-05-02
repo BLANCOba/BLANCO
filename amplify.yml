@@ -8,7 +8,7 @@ frontend:
       commands:
         - node .yarn/releases/yarn-4.9.1.cjs build
   artifacts:
-    baseDirectory: out
+    baseDirectory: .next
     files:
       - '**/*'
   cache:
